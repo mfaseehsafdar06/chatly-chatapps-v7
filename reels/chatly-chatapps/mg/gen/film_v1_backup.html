@@ -1,0 +1,528 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<!-- Chatly in WhatsApp & Discord: MG layer timed to the founder's own voice (src/aroll-1120.mov, words in words.js).
+     House style of the Chatly YouTube films (Want It / One Ask / Your Inbox): pale drifting fields, Google Sans Flex kinetic type,
+     one hero element at a time, real Chatly UI (reference/chatly-ui-kit) and real copy from chatly-web (settings/chat-apps).
+     WhatsApp + Discord are drawn as faithful light/dark recreations. window.render(t) is deterministic. -->
+<link rel="stylesheet" href="../../../../reference/chatly-ui-kit/chatly-ui.css">
+<style>
+@font-face{font-family:'Google Sans Flex';src:url('../../../chatly-smb/brand/fonts/GoogleSansFlex.woff2') format('woff2');font-weight:1 1000}
+@font-face{font-family:'GS';src:url('../../../chatly-smb/brand/fonts/GoogleSansFlex.woff2') format('woff2');font-weight:1 1000}
+html,body{margin:0;width:1920px;height:1080px;overflow:hidden;background:#F3F6FB}
+#stage{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden;font-family:'Google Sans Flex','GS',sans-serif;color:#15181E;-webkit-font-smoothing:antialiased}
+.L{position:absolute;left:0;top:0;width:1920px;height:1080px;overflow:hidden}
+.e{position:absolute;left:0;top:0;transform-origin:0 0}
+.kin{font-weight:500;letter-spacing:-.035em;line-height:1.08;white-space:nowrap;color:#15181E}
+.mk{position:relative;display:inline-block}
+.mk>i{position:absolute;left:-.08em;right:-.08em;top:.12em;bottom:.02em;border-radius:.12em;background:#98C2FF;transform-origin:0 50%;z-index:-1}
+/* iOS / WhatsApp */
+.ios{font-family:-apple-system,'SF Pro Text','Helvetica Neue',Helvetica,sans-serif;-webkit-font-smoothing:antialiased}
+.phone{position:absolute;background:#0E0F12;border-radius:74px;box-shadow:0 60px 120px -40px rgba(20,30,70,.45),0 0 0 2px #2A2C33 inset}
+.phone .scr{position:absolute;left:14px;top:14px;right:14px;bottom:14px;border-radius:61px;overflow:hidden;background:#EFEAE2}
+.phone .isl{position:absolute;left:50%;top:26px;width:122px;height:36px;margin-left:-61px;border-radius:20px;background:#000;z-index:9}
+.sb{position:absolute;left:0;right:0;top:0;height:54px;display:flex;align-items:center;justify-content:space-between;padding:0 34px 0 46px;font-size:17px;font-weight:600;color:#000;z-index:8}
+.wa-hd{position:absolute;left:0;right:0;top:0;height:112px;background:#F6F5F3;border-bottom:1px solid #E2DFDA;z-index:5}
+.wa-hd .row{position:absolute;left:0;right:0;top:56px;height:52px;display:flex;align-items:center;gap:10px;padding:0 16px 0 8px}
+.wa-hd .av{width:38px;height:38px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.wa-hd .nm{font-size:17px;font-weight:600;color:#111;line-height:20px}
+.wa-hd .st{font-size:12.5px;color:#6E6E6E;line-height:16px}
+.wa-body{position:absolute;left:0;right:0;top:112px;bottom:84px;display:flex;flex-direction:column;justify-content:flex-end;padding:0 10px 10px;overflow:hidden;
+  background-color:#EFEAE2;background-image:radial-gradient(rgba(150,130,100,.10) 1.2px,transparent 1.3px);background-size:22px 22px}
+.wa-in{position:absolute;left:0;right:0;bottom:0;height:84px;background:#F6F5F3;display:flex;align-items:flex-start;gap:10px;padding:10px 12px 0;box-sizing:border-box;z-index:5}
+.wa-in .fld{flex:1;height:38px;border-radius:19px;background:#fff;border:1px solid #E3E0DB;display:flex;align-items:center;padding:0 14px;font-size:16px;color:#111;box-sizing:border-box;white-space:nowrap;overflow:hidden}
+.wa-in .mic{width:38px;height:38px;border-radius:50%;background:#1DAA61;flex:none;display:flex;align-items:center;justify-content:center}
+.msg{display:grid;min-height:0}
+.msg>div{min-height:0;overflow:hidden}
+.bub{position:relative;max-width:300px;padding:6px 8px 6px 9px;border-radius:9px;font-size:16px;line-height:21px;color:#111;box-shadow:0 1px .5px rgba(11,20,26,.13);margin-top:5px;word-wrap:break-word}
+.bub.me{background:#D9FDD3;margin-left:auto;border-top-right-radius:2px}
+.bub.them{background:#fff;margin-right:auto;border-top-left-radius:2px}
+.bub .tm{float:right;margin:7px 0 -4px 10px;font-size:11px;line-height:14px;color:#667781;display:flex;align-items:center;gap:3px}
+.wa-day{align-self:center;margin:6px 0 4px;padding:4px 10px;border-radius:8px;background:#fff;font-size:12.5px;color:#54656F;box-shadow:0 1px .5px rgba(11,20,26,.13)}
+/* WhatsApp chat list */
+.wl-row{display:flex;align-items:center;gap:12px;height:76px;padding:0 16px;border-bottom:1px solid #EEECE8;background:#fff}
+.wl-row .av{width:50px;height:50px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:600;color:#fff}
+.wl-row .tx{flex:1;min-width:0}
+.wl-row .nm{font-size:17px;font-weight:600;color:#111;display:flex;justify-content:space-between}
+.wl-row .nm span{font-size:13px;font-weight:400;color:#8A8F93}
+.wl-row .pv{font-size:15px;color:#6E7378;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:flex;justify-content:space-between;gap:8px;margin-top:3px}
+.wl-row .bd{flex:none;min-width:22px;height:22px;border-radius:11px;background:#25D366;color:#fff;font-size:13px;font-weight:600;display:flex;align-items:center;justify-content:center;padding:0 6px;box-sizing:border-box}
+/* notification banners */
+.nb{position:absolute;width:780px;border-radius:34px;background:rgba(255,255,255,.82);backdrop-filter:blur(30px);box-shadow:0 30px 70px -26px rgba(28,52,120,.30),0 0 0 1px rgba(255,255,255,.9) inset;display:flex;gap:22px;padding:26px 30px;box-sizing:border-box}
+.nb .ic{width:74px;height:74px;border-radius:18px;flex:none}
+.nb .tl{font-size:29px;font-weight:600;color:#111;display:flex;justify-content:space-between;line-height:36px}
+.nb .tl span{font-size:24px;font-weight:400;color:#8A8F99}
+.nb .bd{font-size:29px;color:#2A2D33;line-height:38px;margin-top:2px}
+/* discord */
+.dc{position:absolute;background:#313338;border-radius:16px;overflow:hidden;font-family:'gg sans','Noto Sans','Helvetica Neue',Helvetica,Arial,sans-serif;color:#DBDEE1;box-shadow:0 60px 120px -40px rgba(20,30,70,.5)}
+.dc .rail{position:absolute;left:0;top:0;bottom:0;width:72px;background:#1E1F22}
+.dc .rail i{display:block;width:48px;height:48px;border-radius:24px;margin:12px auto 0;background:#313338}
+.dc .side{position:absolute;left:72px;top:0;bottom:0;width:240px;background:#2B2D31}
+.dc .side .it{height:42px;margin:2px 8px;border-radius:6px;display:flex;align-items:center;gap:12px;padding:0 8px;font-size:16px;color:#949BA4}
+.dc .side .it.on{background:#404249;color:#F2F3F5}
+.dc .side .it b{width:32px;height:32px;border-radius:50%;flex:none}
+.dc .main{position:absolute;left:312px;top:0;right:0;bottom:0}
+.dc .hd{height:48px;border-bottom:1px solid #1F2023;display:flex;align-items:center;gap:10px;padding:0 16px;font-size:16px;font-weight:600;color:#F2F3F5}
+.dc .tag{display:inline-flex;align-items:center;gap:3px;height:16px;padding:0 5px;border-radius:4px;background:#5865F2;color:#fff;font-size:10.5px;font-weight:600;letter-spacing:.02em;vertical-align:2px}
+.dc .m{display:flex;gap:16px;padding:8px 16px 6px}
+.dc .m .av{width:40px;height:40px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.dc .m .nm{font-size:16px;font-weight:600;color:#F2F3F5;line-height:22px}
+.dc .m .nm span{font-size:12px;font-weight:400;color:#949BA4;margin-left:6px}
+.dc .m .tx{font-size:16px;line-height:22px;color:#DBDEE1}
+.dc .cmd{color:#C9CDFB;background:rgba(88,101,242,.3);border-radius:3px;padding:0 2px}
+.dc .in{position:absolute;left:16px;right:16px;bottom:22px;height:44px;border-radius:8px;background:#383A40;display:flex;align-items:center;padding:0 16px;font-size:16px;color:#6D6F78}
+/* settings */
+.st-shell{position:absolute;background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 50px 120px -30px rgba(28,52,120,.28)}
+.st-nav{position:absolute;left:0;top:0;bottom:0;width:260px;background:#F7F7F7;border-right:1px solid #ECECEC;padding:28px 14px;box-sizing:border-box}
+.st-nav .g{font-size:12.5px;font-weight:500;color:#8A8A8A;margin:18px 10px 6px}
+.st-nav .i{height:36px;border-radius:10px;display:flex;align-items:center;padding:0 10px;font-size:14.5px;color:#3A3A3A}
+.st-nav .i.on{background:#EBEBEB;color:#0F0F0F;font-weight:500}
+.st-main{position:absolute;left:260px;top:0;right:0;bottom:0;padding:54px 80px;box-sizing:border-box}
+.st-card{border:1px solid #E6E6E6;border-radius:16px;overflow:hidden}
+.st-row{display:flex;align-items:center;gap:14px;padding:16px 18px;position:relative}
+.st-row+.st-row{border-top:1px solid #E6E6E6}
+.st-btn{height:36px;border-radius:10px;background:#F1F1F1;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500;color:#0F0F0F;flex:none}
+.cu-sb-hist{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.cu-sb-hist p{flex:1;min-width:0}
+.cu-sb-hist .src{display:flex;color:#8F8F8F;flex:none}
+</style></head>
+<body><div id="stage"><div id="bgA" class="L"></div><div id="bgB" class="L"></div><div id="sc" class="L"></div><div id="top" class="L"></div></div>
+<script src="words.js"></script>
+<script type="module">
+import CU from '../../../../reference/chatly-ui-kit/chatly-ui.js';
+const $ = (id) => document.getElementById(id);
+const WD = window.WORDS, Wt = (i) => WD[i].t, We = (i) => WD[i].e;
+/* ---------- time + easing ---------- */
+const cl = (x, a = 0, b = 1) => Math.max(a, Math.min(b, x)), seg = (t, a, b) => cl((t - a) / (b - a)), lerp = (a, b, k) => a + (b - a) * k;
+const eo = (k) => 1 - Math.pow(1 - cl(k), 3), eo5 = (k) => 1 - Math.pow(1 - cl(k), 5), eio = (k) => { k = cl(k); return k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2; };
+const sio = (k) => { k = cl(k); return k * k * (3 - 2 * k); };
+const spring = (k) => { k = cl(k); return 1 - Math.exp(-6 * k) * Math.cos(7.5 * k); };   // overshoot pop
+const typed = (txt, t, t0, t1) => txt.slice(0, Math.round(txt.length * seg(t, t0, t1)));
+const blink = (t) => Math.floor(t * 2.2) % 2 === 0;
+/* ---------- placement ---------- */
+function E(html, { x = 0, y = 0, w, h, s = 1, ox = .5, oy = .5, op = 1, b = 0, z = 1, r = 0, extra = '' } = {}) {
+  if (op <= .002) return '';
+  const tx = x + ox * w * (1 - s), ty = y + oy * (h || 0) * (1 - s);
+  return `<div class="e" style="width:${w}px;${h ? `height:${h}px;` : ''}transform:translate(${tx.toFixed(2)}px,${ty.toFixed(2)}px) scale(${s.toFixed(5)})${r ? ` rotate(${r.toFixed(2)}deg)` : ''};opacity:${cl(op).toFixed(3)};z-index:${z};${b > .3 ? `filter:blur(${b.toFixed(2)}px);` : ''}${extra}">${html}</div>`;
+}
+const layer = (inner, { op = 1, b = 0, s = 1 } = {}) => op <= .002 ? '' : `<div class="L" style="opacity:${cl(op).toFixed(3)};${b > .3 ? `filter:blur(${b.toFixed(2)}px);` : ''}${s !== 1 ? `transform:scale(${s.toFixed(5)});transform-origin:960px 540px;` : ''}">${inner}</div>`;
+// camera: render a 1920x1080 world at scale S looking at world point (cx,cy)
+const cam = (html, S, cx, cy) => `<div class="e" style="width:1920px;height:1080px;transform:translate(${(960 - cx * S).toFixed(2)}px,${(540 - cy * S).toFixed(2)}px) scale(${S.toFixed(5)})">${html}</div>`;
+
+/* ---------- gradient fields ---------- */
+const PAL = {
+  white: ['#F6F8FC', [['#DCE7FA', 22, 18, 70, 60, .85], ['#F4EDE6', 82, 88, 55, 45, .7], ['#EAF0FB', 70, 10, 50, 40, .6]]],
+  sky: ['#EAF0FC', [['#BFD4FF', 16, 24, 58, 58, 1], ['#FFDCCB', 86, 82, 52, 46, .85], ['#D6E4FF', 76, 8, 48, 42, .9], ['#F6F1EB', 42, 96, 62, 36, .8]]],
+  air: ['#F2F5FB', [['#CFDFFF', 86, 16, 56, 52, .9], ['#FBE6DA', 8, 92, 52, 42, .75], ['#E4ECFA', 26, 8, 52, 42, .8]]],
+  mint: ['#EEF6F1', [['#C9EBD6', 80, 20, 58, 52, .95], ['#DCE7FA', 14, 86, 56, 50, .85], ['#F6F1EB', 40, 6, 40, 34, .7]]],
+  mist: ['#E9EEF7', [['#C4D6F7', 30, 30, 60, 56, .95], ['#F5E4DA', 80, 80, 52, 46, .8]]],
+  peach: ['#FAEEE6', [['#FFCDB4', 24, 72, 62, 52, 1], ['#FBE3D4', 80, 18, 56, 50, .9], ['#D8E3FA', 88, 92, 46, 40, .75]]],
+  ice: ['#E3ECFB', [['#A6C4FA', 28, 34, 62, 56, 1], ['#D9E8FF', 82, 72, 56, 50, .9], ['#F3F7FF', 62, 8, 42, 36, .8]]],
+  bloom: ['#A9C3F6', [['#4F7FEB', 49, 42, 46, 58, 1], ['#7EA4F3', 18, 84, 52, 50, .8], ['#C9DAFA', 86, 12, 48, 46, .85], ['#F3D9CF', 92, 92, 40, 34, .5]]],
+  dusk: ['#E2E6F6', [['#B4C0F0', 34, 30, 62, 56, 1], ['#F8D4C6', 76, 82, 56, 46, .9], ['#C7D7FA', 86, 14, 46, 40, .8]]],
+  stone: ['#F7F6F2', [['#ECE9E2', 30, 20, 60, 50, .8], ['#E6ECF8', 80, 86, 56, 46, .7]]],
+};
+const PSCH = [[0, 'sky', 0], [6.62, 'white', .4], [12.3, 'stone', .3], [13.5, 'peach', .35], [16.6, 'mint', 0], [22.75, 'stone', .3], [25.7, 'white', .3],
+  [27.75, 'mist', .35], [38.8, 'air', 0], [42.2, 'mint', .4], [45.3, 'sky', .35], [48.75, 'peach', .35], [52.7, 'ice', .3],
+  [57.4, 'white', .3], [58.35, 'air', .35], [62.75, 'dusk', .4]];
+const hexA = (h, a) => `rgba(${parseInt(h.slice(1, 3), 16)},${parseInt(h.slice(3, 5), 16)},${parseInt(h.slice(5, 7), 16)},${a})`;
+function field(key, t) {
+  const [base, blobs] = PAL[key];
+  const g = blobs.map(([c, x, y, rx, ry, a], i) => { const dx = 4 * Math.sin(t * .21 + i * 1.7), dy = 3 * Math.cos(t * .17 + i * 2.3);
+    return `radial-gradient(${rx}% ${ry}% at ${(x + dx).toFixed(2)}% ${(y + dy).toFixed(2)}%, ${hexA(c, a)} 0%, ${hexA(c, a * .55)} 42%, ${hexA(c, 0)} 100%)`; });
+  return `background:${g.join(',')},${base};`;
+}
+function bg(t) {
+  let i = 0; for (let j = 0; j < PSCH.length; j++) if (t >= PSCH[j][0]) i = j;
+  const [s0, k0, d0] = PSCH[i], prev = i ? PSCH[i - 1][1] : k0, k = d0 ? sio(seg(t, s0, s0 + d0)) : 1;
+  $('bgA').style.cssText = field(prev, t); $('bgB').style.cssText = field(k0, t) + `opacity:${k.toFixed(3)}`;
+}
+
+/* ---------- brand + app icons ---------- */
+const MARK = (s, c = '#fff') => CU.icon('LogoIcon', { size: s, color: c });
+const LOCK = (w, h, c) => CU.icon('LogoWithText', { size: [w, h], color: c });
+const WA_PATH = 'M1.24652 14.9572L1.95746 11.6564C1.0437 10.2152 0.687237 8.49004 0.954956 6.80466C1.22268 5.11928 2.09618 3.58951 3.41157 2.50236C4.72697 1.4152 6.39386 0.845382 8.0995 0.899808C9.80514 0.954234 11.4323 1.62916 12.6757 2.79797C13.9191 3.96677 14.6933 5.54913 14.853 7.24814C15.0128 8.94716 14.547 10.6461 13.5433 12.0261C12.5395 13.4062 11.0666 14.3726 9.40098 14.7439C7.73537 15.1153 5.99149 14.8661 4.49652 14.0432L1.24652 14.9572Z';
+const WA_PH = 'M10.6396 8.86238C10.4872 8.76082 10.3349 8.71004 10.1825 8.91316L9.57315 9.72566C9.4208 9.82723 9.31924 9.87801 9.11611 9.77645C8.3544 9.3702 7.28799 8.91316 6.37393 7.38973C6.32315 7.1866 6.42471 7.08504 6.52627 6.98348L6.9833 6.27254C7.08486 6.17098 7.03408 6.06941 6.9833 5.96785L6.37393 4.4952C6.22158 4.08895 6.06924 4.13973 5.9169 4.13973H5.51065C5.40908 4.13973 5.20596 4.19051 5.00283 4.39363C3.88565 5.51082 4.34268 7.08504 5.15518 8.10066C5.30752 8.30379 6.32315 10.1319 8.50674 11.0968C10.1317 11.8077 10.4872 11.7061 10.9442 11.6046C11.5028 11.5538 12.0614 11.0968 12.3153 10.6397C12.3661 10.4874 12.62 9.82723 12.4169 9.72566Z';
+const WA_MONO = (s, c = 'currentColor') => `<svg width="${s}" height="${s}" viewBox="0 0 16 16" fill="none" style="display:block"><path fill-rule="evenodd" d="${WA_PATH} ${WA_PH}" fill="${c}"/><path d="${WA_PATH}" stroke="${c}" stroke-width="1.32"/></svg>`;
+const WA_GLYPH = (s) => `<svg width="${s}" height="${s}" viewBox="0 0 16 16" fill="none" style="display:block"><path d="${WA_PATH}" fill="none" stroke="#fff" stroke-width="1.25"/><path d="${WA_PH}" fill="#fff"/></svg>`;
+const DC_PATH = 'M15.238 3.277a14.846 14.846 0 0 0-3.664-1.136.056.056 0 0 0-.059.027 10.34 10.34 0 0 0-.456.938 13.702 13.702 0 0 0-4.115 0 9.486 9.486 0 0 0-.464-.938.058.058 0 0 0-.058-.027c-1.286.221-2.516.609-3.664 1.136a.052.052 0 0 0-.024.02C.4 6.785-.24 10.186.074 13.544c.002.016.011.032.024.042a14.928 14.928 0 0 0 4.494 2.272.058.058 0 0 0 .064-.02c.346-.473.654-.972.92-1.496a.057.057 0 0 0-.032-.08 9.832 9.832 0 0 1-1.404-.669.058.058 0 0 1-.006-.096c.094-.07.189-.144.279-.218a.056.056 0 0 1 .058-.008c2.946 1.345 6.135 1.345 9.046 0a.056.056 0 0 1 .06.007c.09.075.184.149.279.22a.058.058 0 0 1-.005.095 9.228 9.228 0 0 1-1.405.669.057.057 0 0 0-.03.08c.27.523.578 1.022.918 1.495.014.02.04.028.063.021a14.877 14.877 0 0 0 4.502-2.272.058.058 0 0 0 .023-.041c.376-3.883-.628-7.256-2.66-10.246a.046.046 0 0 0-.024-.021Zm-9.223 8.221c-.887 0-1.618-.814-1.618-1.814S5.114 7.87 6.015 7.87c.908 0 1.632.821 1.618 1.814 0 1-.717 1.814-1.618 1.814Zm5.981 0c-.887 0-1.618-.814-1.618-1.814s.717-1.814 1.618-1.814c.908 0 1.632.821 1.618 1.814 0 1-.71 1.814-1.618 1.814Z';
+const DC_MONO = (s, c = 'currentColor') => `<svg width="${s}" height="${s}" viewBox="0 0 18 18" style="display:block"><path d="${DC_PATH}" fill="${c}"/></svg>`;
+// glossy app tiles
+const TILE = (kind, s) => {
+  const r = s * .235, inner = `box-shadow:inset 0 ${(s * .03).toFixed(1)}px ${(s * .05).toFixed(1)}px rgba(255,255,255,.35),inset 0 -${(s * .04).toFixed(1)}px ${(s * .08).toFixed(1)}px rgba(0,0,0,.12),0 ${(s * .12).toFixed(1)}px ${(s * .28).toFixed(1)}px -${(s * .08).toFixed(1)}px rgba(20,30,70,.35)`;
+  const base = `width:${s}px;height:${s}px;border-radius:${r}px;display:flex;align-items:center;justify-content:center;${inner};`;
+  if (kind === 'wa') return `<div style="${base}background:linear-gradient(160deg,#5EF07F,#1EBE57 55%,#16A34A)">${WA_GLYPH(s * .62)}</div>`;
+  if (kind === 'dc') return `<div style="${base}background:linear-gradient(160deg,#7B86FF,#5865F2 55%,#4752D6)">${DC_MONO(s * .58, '#fff')}</div>`;
+  if (kind === 'chatly') return `<div style="${base}background:radial-gradient(120% 120% at 30% 20%,#2A3550,#0B1020 70%)">${MARK(s * .5)}</div>`;
+  if (kind === 'plus') return `<div style="width:${s}px;height:${s}px;border-radius:${r}px;border:3px dashed rgba(21,24,30,.22);box-sizing:border-box;display:flex;align-items:center;justify-content:center;font-size:${s * .42}px;color:rgba(21,24,30,.35);font-weight:400">+</div>`;
+  return '';
+};
+const CHATLY_AV = (s) => `<div style="width:${s}px;height:${s}px;border-radius:50%;background:radial-gradient(120% 120% at 30% 20%,#2A3550,#0B1020 70%);display:flex;align-items:center;justify-content:center">${MARK(s * .52)}</div>`;
+const CURSOR = (s) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" style="display:block;overflow:visible"><path d="M5 2.5v17.2l4.3-4.1 2.7 6.1 2.9-1.3-2.7-6h6z" fill="#111" stroke="#fff" stroke-width="1.6" stroke-linejoin="round"/></svg>`;
+const TICKS = `<svg width="17" height="11" viewBox="0 0 17 11" style="display:block"><path d="M1 5.8l3 3L11 1.6M6.5 8.8l.9.9L14.6 1.6" stroke="#53BDEB" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+const A = (f) => `../assets/${f}`;
+
+/* ---------- kinetic type: words blur in on their spoken times ---------- */
+// parts: [{w, t, mk (marker on), mt (marker time)}]; returns a centred line
+function kline(parts, t, { fs = 120, x = 0, y = 470, w = 1920, align = 'center', color = '#15181E', gone = 99, wrap = false } = {}) {
+  const html = parts.map((p, i) => { const k = eo5(seg(t, p.t - .06, p.t + .26));
+    if (t < p.t - .06) return `<span style="display:inline-block;opacity:0;margin-right:${i < parts.length - 1 ? '.24em' : 0}">${p.w}</span>`;
+    const mk = p.mk ? `<i style="transform:scaleX(${eio(seg(t, p.mt ?? p.t, (p.mt ?? p.t) + .3)).toFixed(3)})"></i>` : '';
+    return `<span class="${p.mk ? 'mk' : ''}" style="display:inline-block;margin-right:${i < parts.length - 1 ? '.24em' : 0};opacity:${cl(k * 2).toFixed(3)};transform:translateY(${((1 - k) * .25).toFixed(3)}em);${k < 1 ? `filter:blur(${((1 - k) * 9).toFixed(1)}px);` : ''}">${mk}${p.w}</span>`; }).join('');
+  const kg = seg(t, gone, gone + .25);
+  return E(`<div class="kin" style="font-size:${fs}px;text-align:${align};color:${color};isolation:isolate;${wrap ? 'white-space:normal;' : ''}">${html}</div>`, { x, y: y - kg * 20, w, h: fs * 1.15, op: 1 - kg, b: kg * 8 });
+}
+const P = (w, i, extra = {}) => ({ w, t: Wt(i), ...extra });
+
+/* ---------- WhatsApp phone ---------- */
+const PW = 430, PH = 932;   // screen; phone body adds 14 px bezel
+// msgs: [{me, html, t, time}] — appear (height grows via grid fr) at t
+function waMsgs(msgs, t) {
+  return msgs.map((m) => { const k = m.t === undefined ? 1 : eo(seg(t, m.t, m.t + .28)); if (k <= 0) return '';
+    if (m.day) return `<div class="wa-day">${m.day}</div>`;
+    const pop = spring(seg(t, m.t ?? -9, (m.t ?? -9) + .45));
+    return `<div class="msg" style="grid-template-rows:${k.toFixed(4)}fr"><div><div class="bub ${m.me ? 'me' : 'them'}" style="${m.style || ''};transform-origin:${m.me ? '100%' : '0%'} 100%;transform:scale(${lerp(.86, 1, pop).toFixed(4)});opacity:${cl(k * 1.6).toFixed(3)}">${m.html}<span class="tm">${m.time || '9:41'}${m.me ? TICKS : ''}</span></div></div></div>`; }).join('');
+}
+function waChat({ name, status = 'online', av, msgs, t, input = '', caret = false, rec = null, typing = null, scroll = 0 }) {
+  const ty = typing && t >= typing[0] && t < typing[1] ? `<div class="msg"><div><div class="bub them" style="width:58px;height:21px;display:flex;align-items:center;gap:5px;padding:9px 12px">${[0, 1, 2].map((i) => `<i style="width:8px;height:8px;border-radius:50%;background:#9AA3A9;opacity:${(.35 + .65 * Math.max(0, Math.sin(t * 9 - i * .9))).toFixed(2)}"></i>`).join('')}</div></div></div>` : '';
+  let inp;
+  if (rec) {   // recording a voice note
+    const sec = Math.floor(rec.el);
+    inp = `<div style="flex:1;height:38px;display:flex;align-items:center;gap:10px;font-size:16px;color:#111"><i style="width:11px;height:11px;border-radius:50%;background:#F0374A;opacity:${blink(t * 1.3) ? 1 : .35}"></i><span style="font-variant-numeric:tabular-nums">0:0${sec}</span>
+      <div style="flex:1;display:flex;align-items:center;gap:3px;height:30px;overflow:hidden;justify-content:flex-end">${Array.from({ length: 34 }, (_, i) => { const on = i / 34 < rec.el / 3.2; const h = 4 + 20 * Math.abs(Math.sin(i * 1.7 + 2) * Math.sin(i * .43 + t * 3)); return `<i style="width:3px;height:${on ? h.toFixed(1) : 3}px;border-radius:2px;background:${on ? '#1DAA61' : '#C9CDD0'}"></i>`; }).join('')}</div></div>
+      <div class="mic" style="transform:scale(1.25)">${CU.icon('MicrophoneIcon', { size: 20, color: '#fff' })}</div>`;
+  } else {
+    inp = `<div style="width:30px;height:38px;display:flex;align-items:center;justify-content:center;font-size:30px;color:#2C2C2C;font-weight:300">+</div>
+      <div class="fld">${input ? `<span>${input}</span>` : '<span style="color:#9A9A9A">Message</span>'}${caret ? `<i style="display:inline-block;width:2px;height:20px;background:#1DAA61;margin-left:1px;opacity:${blink(t) ? 1 : 0}"></i>` : ''}</div>
+      <div class="mic">${input ? '<svg width="18" height="18" viewBox="0 0 24 24"><path d="M3 20.5l18-8.5L3 3.5l2.2 7L14 12l-8.8 1.5z" fill="#fff"/></svg>' : CU.icon('MicrophoneIcon', { size: 20, color: '#fff' })}</div>`;
+  }
+  return `<div class="ios" style="position:absolute;inset:0">
+    <div class="sb" style="background:#F6F5F3"><span>9:41</span><span style="display:flex;gap:6px;align-items:center"><svg width="18" height="12" viewBox="0 0 18 12"><rect x="0" y="8" width="3" height="4" rx="1" fill="#000"/><rect x="5" y="5.5" width="3" height="6.5" rx="1" fill="#000"/><rect x="10" y="3" width="3" height="9" rx="1" fill="#000"/><rect x="15" y="0" width="3" height="12" rx="1" fill="#000"/></svg><svg width="27" height="13" viewBox="0 0 27 13"><rect x=".5" y=".5" width="23" height="12" rx="3.5" stroke="#000" fill="none" opacity=".4"/><rect x="2" y="2" width="20" height="9" rx="2" fill="#000"/><rect x="24.5" y="4" width="2" height="5" rx="1" fill="#000" opacity=".4"/></svg></span></div>
+    <div class="wa-hd"><div class="row"><svg width="14" height="24" viewBox="0 0 14 24"><path d="M11 2L2 12l9 10" stroke="#1DAA61" stroke-width="2.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div class="av">${av}</div><div style="flex:1"><div class="nm">${name}</div><div class="st">${status}</div></div>
+      <svg width="26" height="18" viewBox="0 0 26 18"><rect x="1" y="2" width="16" height="14" rx="3" stroke="#1DAA61" stroke-width="2" fill="none"/><path d="M18 7l6-4v12l-6-4z" stroke="#1DAA61" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+      <svg width="22" height="22" viewBox="0 0 24 24" style="margin-left:14px"><path d="M6.6 10.8a15.1 15.1 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11.4 11.4 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1z" stroke="#1DAA61" stroke-width="1.8" fill="none"/></svg></div></div>
+    <div class="wa-body" style="transform:translateY(${scroll}px)">${waMsgs(msgs, t)}${ty}</div>
+    <div class="wa-in">${inp}</div></div>`;
+}
+const phone = (inner, x, y, { s = 1, op = 1, b = 0, r = 0, z = 1 } = {}) => E(`<div class="phone" style="left:0;top:0;width:${PW + 28}px;height:${PH + 28}px"><div class="isl"></div><div class="scr">${inner}</div></div>`, { x, y, w: PW + 28, h: PH + 28, s, op, b, r, z });
+
+/* ---------- shared content ---------- */
+const DECK_MSG = (big = 1) => `<div style="margin:-2px -4px 0;border-radius:7px;overflow:hidden;background:#F7F8F9">
+   <div style="position:relative;height:${(150 * big).toFixed(0)}px;background:url(${A('q3_cover.png')}) center/cover"><div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.88) 42%,rgba(255,255,255,0) 70%)"></div>
+     <div style="position:absolute;left:16px;top:18px;font-family:'Google Sans Flex';color:#111"><div style="font-size:11px;letter-spacing:.08em;color:#777;font-weight:500">BOARD REVIEW · Q3</div><div style="font-size:30px;line-height:31px;font-weight:500;letter-spacing:-.02em;margin-top:8px">Q3 in<br>review</div></div></div>
+   <div style="display:flex;align-items:center;gap:10px;padding:10px 10px 8px"><div style="width:34px;height:40px;border-radius:4px;background:#E8693A;color:#fff;font-size:10px;font-weight:700;display:flex;align-items:flex-end;justify-content:center;padding-bottom:5px;box-sizing:border-box">PPTX</div>
+   <div style="flex:1"><div style="font-size:15px;font-weight:600;color:#111">Q3 review.pptx</div><div style="font-size:12.5px;color:#667781">5 slides · 2.4 MB</div></div></div></div>`;
+const AD_IMG = (w, h, fs = 1) => `<div style="position:relative;width:${w}px;height:${h}px;border-radius:10px;overflow:hidden;background:url(${A('volt.jpg')}) center 46%/cover">
+   <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55))"></div>
+   <div style="position:absolute;left:${22 * fs}px;top:${18 * fs}px;font-family:'Google Sans Flex';color:#fff;font-size:${16 * fs}px;font-weight:600;letter-spacing:.18em">VOLT</div>
+   <div style="position:absolute;left:${22 * fs}px;bottom:${24 * fs}px;right:${22 * fs}px;font-family:'Google Sans Flex';color:#fff"><div style="font-size:${40 * fs}px;line-height:${42 * fs}px;font-weight:500;letter-spacing:-.03em">Silence,<br>on demand.</div>
+   <div style="display:inline-flex;margin-top:${14 * fs}px;height:${38 * fs}px;align-items:center;padding:0 ${18 * fs}px;border-radius:${19 * fs}px;background:#fff;color:#111;font-size:${15 * fs}px;font-weight:600">Shop the drop</div></div></div>`;
+const INBOX_MSG = `<div style="font-weight:600;margin-bottom:4px">📥 Inbox summary · 23 new</div>
+  <div>• <b>3</b> need a reply today</div><div>• Dana approved the Q3 deck</div><div>• Invoice #2041 is due Friday</div><div>• 14 newsletters archived</div>`;
+const DECK_ASK = 'Make a 5-slide deck for our Q3 review';
+
+/* ================= SCENES ================= */
+// S1 hook: WhatsApp notifications stack in on "trips", "fight", "break up"
+function sHook(t) {
+  const N = [[Wt(2), 'Trip crew 🏔️', 'Jake: I booked the cabin. Who’s driving?'], [Wt(7), 'Mom', 'Who left the dishes in the sink??'], [Wt(14), 'Alex', 'we need to talk.']];
+  let h = '';
+  N.forEach(([t0, tl, bd], i) => {
+    const k = spring(seg(t, t0 - .05, t0 + .5)); if (t < t0 - .05) return;
+    const depth = N.filter((n, j) => j > i && t >= n[0]).length, kd = N.slice(i + 1).reduce((a, n) => a + eo(seg(t, n[0], n[0] + .35)), 0);
+    const y = 300 + i * 0 - kd * 34 + (1 - k) * -70, s = (1 - kd * .06) * lerp(.9, 1, k);
+    const last = i === 2;
+    h += E(`<div class="nb ios" style="left:0;top:0"><div class="ic">${TILE('wa', 74)}</div><div style="flex:1"><div class="tl">${tl}<span>now</span></div><div class="bd" style="${last ? 'font-weight:600' : ''}">${bd}</div></div></div>`,
+      { x: 570, y: y + 120, w: 780, h: 130, s: s * 1.45, op: cl(k * 2) * (1 - kd * .28), b: kd * 2.2, z: 10 + i });
+  });
+  // a subtle shake on "we need to talk."
+  const sh = t > Wt(14) && t < Wt(14) + .5 ? Math.sin((t - Wt(14)) * 60) * 6 * (1 - seg(t, Wt(14), Wt(14) + .5)) : 0;
+  return `<div class="L" style="transform:translateX(${sh.toFixed(1)}px)">${h}</div>`;
+}
+// S2 your entire life ... except your actual job
+function sLife(t) {
+  return kline([P('Your', 19), P('entire', 20), P('life', 21), P('happens', 22), P('in', 23), P('the', 24), P('chat.', 25)], t, { fs: 100, y: 380 }) +
+    kline([P('Except', 26), P('your', 27), P('actual', 28, { mk: 1, mt: Wt(28) + .1 }), P('job.', 29, { mk: 1, mt: Wt(28) + .1 })], t, { fs: 100, y: 540 });
+}
+const sThink = (t) => kline([P('Think', 30), P('about', 31), P('it.', 32)], t, { fs: 130, y: 460 });
+// S4 180 years
+function s180(t) {
+  const kn = eo(seg(t, Wt(36) - .05, Wt(36) + .7)), n = Math.round(180 * kn);
+  const kk = eo5(seg(t, Wt(36) - .08, Wt(36) + .25));
+  const num = E(`<div class="kin" style="font-size:300px;letter-spacing:-.04em;text-align:right">${n}</div>`, { x: 160, y: 250, w: 760, h: 330, op: kk, b: (1 - kk) * 12 });
+  const yrs = kline([P('years', 37)], t, { fs: 150, x: 960, y: 360, w: 700, align: 'left' });
+  const sub = kline([P('to', 38), P('get', 39), P('really', 40), P('good', 41), P('at', 42), P('chatting.', 43, { mk: 1, mt: Wt(43) })], t, { fs: 72, y: 690 });
+  return num + yrs + sub;
+}
+// WhatsApp chat list (S5): everything happens here; then "Sam · Work" jumps to the top on "work"
+function waList(t) {
+  const work = t >= Wt(54) - .05;
+  const rows0 = [['Trip crew 🏔️', 'Jake: I booked the cabin 🙌', '9:38', '#F59E0B', 'T', 3, Wt(45)], ['Mom', 'Call me when you land ❤️', '9:31', '#EC4899', 'M', 1, Wt(46) + .05],
+    ['Book club', 'Priya: chapter 9 was WILD', '9:12', '#8B5CF6', 'B', 5, Wt(48) - .02], ['Alex', 'ok.', '8:57', '#0EA5E9', 'A', 0, -1], ['Gym', 'Leg day 6 am, no excuses', 'Yesterday', '#10B981', 'G', 0, -1],
+    ['Landlord', 'Rent reminder for the 1st', 'Yesterday', '#64748B', 'L', 0, -1]];
+  const sam = ['Boss', 'can you make me a slide? 🙏', '9:41', '#1F2937', 'B', 1, Wt(54)];
+  const kj = eo(seg(t, Wt(54) - .05, Wt(54) + .4));
+  const row = (r, extra = '') => { const [nm, pv, tm, col, ini, n, tb] = r, on = tb >= 0 && t >= tb; const kb = spring(seg(t, tb, tb + .4));
+    return `<div class="wl-row" style="${extra}"><div class="av" style="background:${col}">${ini}</div><div class="tx"><div class="nm">${nm}<span style="${on && n ? 'color:#1DAA61' : ''}">${tm}</span></div><div class="pv"><span style="overflow:hidden;text-overflow:ellipsis">${pv}</span>${on && n ? `<span class="bd" style="transform:scale(${kb.toFixed(3)})">${n}</span>` : ''}</div></div></div>`; };
+  const H = 76;
+  const list = `<div style="position:relative;height:${H * 7}px">${work ? `<div style="position:absolute;left:0;right:0;top:${((1 - kj) * -H).toFixed(1)}px;opacity:${kj.toFixed(3)}">${row(sam, 'background:#F0FBF3')}</div>` : ''}
+    ${rows0.map((r, i) => `<div style="position:absolute;left:0;right:0;top:${(i * H + (work ? kj * H : 0)).toFixed(1)}px">${row(r)}</div>`).join('')}</div>`;
+  return `<div class="ios" style="position:absolute;inset:0;background:#fff">
+    <div class="sb"><span>9:41</span></div>
+    <div style="position:absolute;left:0;right:0;top:54px;padding:6px 18px 0"><div style="display:flex;justify-content:space-between;align-items:center;height:40px"><span style="font-size:17px;color:#1DAA61">Edit</span><span style="width:30px;height:30px;border-radius:15px;background:#1DAA61;color:#fff;display:flex;align-items:center;justify-content:center;font-size:24px">+</span></div>
+      <div style="font-size:34px;font-weight:700;color:#111;margin-top:6px">Chats</div>
+      <div style="height:38px;border-radius:12px;background:#F0F0F0;margin:12px 0 8px;display:flex;align-items:center;padding:0 12px;color:#8E8E93;font-size:17px">Ask Meta AI or Search</div></div>
+    <div style="position:absolute;left:0;right:0;top:214px">${list}</div></div>`;
+}
+function sList(t) {
+  const k = eo(seg(t, 16.75, 17.2));
+  const out = eio(seg(t, Wt(61) - .05, Wt(61) + .4));   // on "leave" everything slides out of frame
+  const ph = phone(waList(t), 960 - (PW + 28) / 2, 74 + (1 - k) * 80, { op: k });
+  const left = kline([P('It’s', 44), P('literally', 45), P('how', 46), P('we', 47), P('do', 48), P('everything.', 49)], t, { fs: 72, x: 80, y: 400, w: 480, align: 'left', gone: Wt(51), wrap: true });
+  const right = kline([P('And', 50), P('the', 51), P('minute', 52), P('it', 53), P('comes', 54), P('down', 55), P('to', 56)], t, { fs: 72, x: 1380, y: 360, w: 480, align: 'left', gone: 20.8, wrap: true });
+  const kz = eio(seg(t, 17.5, 18.4)), kb = eio(seg(t, 20.85, 21.5));   // on "work": push onto the Boss's message
+  const S = lerp(lerp(1, 1.18, kz), 3.1, kb), cy = lerp(lerp(540, 470, kz), 342, kb), cx = lerp(960, 935, kb);
+  const slide = `<div class="L" style="transform:translateX(${(-out * 2300).toFixed(1)}px) rotate(${(-out * 4).toFixed(2)}deg);${out > .02 ? `filter:blur(${(out * 14).toFixed(1)}px);` : ''}">${(t < 21.0 ? left + right : '') + cam(ph, S, cx, cy)}</div>`;
+  const kl = eo5(seg(t, Wt(61) - .02, Wt(61) + .3));
+  const leave = kl > 0 ? E(`<div class="kin" style="font-size:130px;text-align:center;isolation:isolate">we have to <span class="mk"><i style="transform:scaleX(${eio(seg(t, Wt(61) + .15, Wt(61) + .45)).toFixed(3)})"></i>leave.</span></div>`, { x: 0, y: 460 + (1 - kl) * 30, w: 1920, h: 150, op: kl, b: (1 - kl) * 10 }) : '';
+  return leave + slide;
+}
+// S6 the detour: tabs pile up -> file renames -> dragged back into WhatsApp and sent on "chat"
+function sDetour(t) {
+  let h = '';
+  // tabs (22.85 - 23.95)
+  const kt = seg(t, 22.85, 23.85);
+  if (t < 24.0) {
+    const n = 1 + Math.floor(kt * 13), op = 1 - seg(t, 23.8, 24.0);
+    const tabs = Array.from({ length: n }, (_, i) => `<div style="flex:1;min-width:0;max-width:220px;height:40px;border-radius:10px 10px 0 0;background:${i === n - 1 ? '#fff' : '#E4E7EC'};display:flex;align-items:center;gap:8px;padding:0 12px;font-size:15px;color:#3A3F47;overflow:hidden;white-space:nowrap"><i style="width:14px;height:14px;border-radius:4px;flex:none;background:${['#4285F4', '#F4B400', '#0F9D58', '#DB4437', '#7E57C2'][i % 5]}"></i>${['Untitled presentation', 'slide templates free', 'how to make slides look good', 'Canva', 'Q3 numbers.xlsx', 'Downloads', 'pitch deck examples', 'Google Slides', 'fonts', 'stock photos office', 'final.pptx', 'Gmail', 'icons', 'convert pdf to pptx'][i % 14]}</div>`).join('');
+    h += E(`<div style="width:1700px;height:700px;border-radius:22px;background:#fff;box-shadow:0 50px 120px -30px rgba(28,52,120,.3);overflow:hidden">
+      <div style="height:52px;background:#DDE1E7;display:flex;align-items:flex-end;gap:2px;padding:0 14px">${tabs}</div>
+      <div style="height:48px;display:flex;align-items:center;padding:0 22px;border-bottom:1px solid #EEE"><div style="flex:1;height:32px;border-radius:16px;background:#F1F3F4;display:flex;align-items:center;padding:0 16px;font-size:15px;color:#555">how to make a slide look professional</div></div>
+      <div style="padding:40px 60px">${[0, 1, 2, 3].map((i) => `<div style="height:22px;width:${[70, 54, 62, 40][i]}%;border-radius:6px;background:#EEF0F3;margin-bottom:18px"></div>`).join('')}</div></div>`, { x: 110, y: 230, w: 1700, h: 700, s: lerp(1, 1.04, kt), op });
+    h += E(`<div class="kin" style="font-size:44px;color:#5A606C;text-align:center">${n} tab${n > 1 ? 's' : ''}</div>`, { x: 0, y: 150, w: 1920, h: 60, op });
+  }
+  // file renames (23.95 - 24.75)
+  if (t >= 23.85 && t < 24.85) {
+    const names = ['final.pptx', 'final_final.pptx', 'final_FINAL_v3.pptx'], idx = Math.min(2, Math.floor(seg(t, 23.95, 24.65) * 3));
+    const k = eo(seg(t, 23.85, 24.1)), op = k * (1 - seg(t, 24.7, 24.85));
+    h += E(`<div style="display:flex;align-items:center;gap:30px"><div style="width:150px;height:184px;border-radius:16px;background:#fff;box-shadow:0 30px 70px -26px rgba(28,52,120,.35);position:relative;flex:none"><div style="position:absolute;left:0;right:0;bottom:0;height:56px;border-radius:0 0 16px 16px;background:#E8693A;color:#fff;font-weight:700;font-size:22px;display:flex;align-items:center;justify-content:center;letter-spacing:.06em">PPTX</div></div>
+      <div class="kin" style="font-size:92px;letter-spacing:-.03em">${names[idx].replace(/(FINAL|final_final|v3)/g, '<span style="color:#E8693A">$1</span>')}</div></div>`, { x: 330, y: 440, w: 1400, h: 190, op, s: lerp(.95, 1, k) });
+  }
+  // back into WhatsApp (24.75 - 25.7): file flies into the chat, sent on "chat"
+  if (t >= 24.7) {
+    const k = eo(seg(t, 24.7, 25.05));
+    const msgs = [{ day: 'Today' }, { me: false, html: 'can you make me a slide? 🙏', time: '9:41' }, { me: true, html: DECK_MSG(.9).replace('Q3 review.pptx', 'final_FINAL_v3.pptx').replace('5 slides · 2.4 MB', '1 slide · 18.6 MB'), t: Wt(71) - .05, time: '11:58', style: 'width:290px;padding:4px' }];
+    h += cam(phone(waChat({ name: 'Boss', status: 'online', av: '<div style="width:38px;height:38px;border-radius:50%;background:#1F2937;color:#fff;font-weight:600;display:flex;align-items:center;justify-content:center">B</div>', msgs, t }), 960 - (PW + 28) / 2, 74 + (1 - k) * 90, { op: k }), 1.6, 960, 700);
+    const kf = seg(t, 24.85, Wt(71) - .05);
+    if (kf < 1) h += E(`<div style="width:110px;height:134px;border-radius:12px;background:#fff;box-shadow:0 30px 60px -20px rgba(28,52,120,.4);position:relative"><div style="position:absolute;left:0;right:0;bottom:0;height:40px;border-radius:0 0 12px 12px;background:#E8693A;color:#fff;font-weight:700;font-size:16px;display:flex;align-items:center;justify-content:center">PPTX</div></div>`,
+      { x: lerp(330, 1000, eio(kf)), y: lerp(440, 760, eio(kf)) - Math.sin(kf * Math.PI) * 120, w: 110, h: 134, s: lerp(1.3, .7, kf), op: k * (1 - seg(kf, .85, 1)), z: 9 });
+  }
+  return h;
+}
+const sNever = (t) => kline([P('It', 72), P('just', 73), P('never', 74), P('starts', 75, { mk: 1, mt: Wt(75) }), P('there.', 76)], t, { fs: 120, y: 460 });
+// S8 AI in WhatsApp isn't new -> it just replies -> ask for a slide, get a paragraph
+const WALL = `Great question! 😊 Creating a slide deck is a great way to communicate your ideas. Here are some steps to help you get started:<br><br><b>1. Define your objective.</b> Before you begin, think about what you want your audience to take away from the presentation.<br><br><b>2. Know your audience.</b> Consider their level of familiarity with the topic and what they expect.<br><br><b>3. Keep it simple.</b> Use concise bullet points, a clear hierarchy and plenty of white space.<br><br><b>4. Choose the right visuals.</b> Charts, images and icons help convey complex information quickly.<br><br><b>5. Be consistent.</b> Use one font, one colour palette and the same layout across your deck.<br><br>Would you like me to explain any of these points in more detail?`;
+function sReplies(t) {
+  let h = '';
+  if (t < 30.45) h += kline([P('AI', 79), P('in', 80), P('WhatsApp', 81), P('isn’t', 82), P('new.', 83)], t, { fs: 116, y: 460, gone: 30.2 });
+  if (t >= 30.2) {
+    const k = eo(seg(t, 30.2, 30.6));
+    const ask = typed(DECK_ASK, t, 33.5, 34.2), sent = t >= 34.3;
+    const msgs = [{ day: 'Today' }, { me: true, html: 'hi', t: -1, time: '9:40' }, { me: false, html: 'Hello! 👋 How can I help you today?', t: -1, time: '9:40' },
+      { me: true, html: 'can you plan my week?', t: 30.5, time: '9:40' }, { me: false, html: 'Sure! Here are some tips for planning your week: start by listing your priorities…', t: Wt(90) - .1, time: '9:40' }];
+    if (sent) msgs.push({ me: true, html: DECK_ASK, t: 34.3, time: '9:41' });
+    if (t >= Wt(98)) msgs.push({ me: false, html: WALL, t: Wt(98), time: '9:41', style: 'max-width:320px' });
+    const scroll = t >= Wt(98) ? -0 + eio(seg(t, Wt(98) + .2, 37.4)) * 0 : 0;
+    const AV = '<div style="width:38px;height:38px;border-radius:50%;background:#B9C0C7;color:#fff;font-weight:600;font-size:14px;display:flex;align-items:center;justify-content:center">AI</div>';
+    const inner = waChat({ name: 'AI Assistant', status: 'online', av: AV, msgs, t, input: sent ? '' : ask, caret: !sent && t > 33.3, typing: [34.4, Wt(98)], scroll });
+    // camera: phone centred; as the wall of text lands, push in and pan down it
+    const kz = eio(seg(t, Wt(98) + .1, 37.3));
+    const S = lerp(1.6, 1.55, eio(seg(t, Wt(98) - .1, Wt(98) + .6))), cy = lerp(lerp(560, 760, eio(seg(t, 30.2, 30.9))), 650, eio(seg(t, Wt(98) - .1, Wt(98) + .4))) - lerp(0, 170, eio(seg(t, Wt(98) + .6, 37.3)));
+    h += cam(phone(inner, 960 - (PW + 28) / 2, 60 + (1 - k) * 90, { op: k }), S, 960, cy);
+    if (t >= Wt(90) - .15 && t < 33.2) h += kline([P('It', 88), P('just', 89), P('replies.', 90, { mk: 1, mt: Wt(90) })], t, { fs: 80, x: 1370, y: 470, w: 520, align: 'left', gone: 32.95, wrap: true });
+  }
+  return h;
+}
+// S9 brand: "So we built Chatly ... to just do it."
+function sBrand(t) {
+  const H = 150, LW = H * 4.05, x0 = 960 - LW / 2;
+  const km = eo5(seg(t, Wt(109) - .05, Wt(109) + .35)), kl = eio(seg(t, Wt(110) - .05, Wt(110) + .3));
+  const lockMarkCx = x0 + LW * 45.6 / 405, cx = lerp(960, lockMarkCx, kl), sc = lerp(1.5, 1, km);
+  const up = eio(seg(t, Wt(112) - .2, Wt(112) + .2)) * 90;
+  let h = E(MARK(H), { x: cx - H / 2, y: 470 - H / 2 - up, w: H, h: H, s: sc, op: km, b: (1 - km) * 14 });
+  if (kl > 0) h += E(`<div style="clip-path:inset(0 ${(74 * (1 - kl)).toFixed(2)}% 0 25%)">${LOCK(LW, H, '#fff')}</div>`, { x: x0, y: 470 - H / 2 - up, w: LW, h: H, op: cl(kl * 1.5) });
+  h += kline([P('to', 111), P('just…', 112), P('do', 113, { mk: 1, mt: Wt(113) }), P('it.', 114, { mk: 1, mt: Wt(113) })], t, { fs: 96, y: 560, color: '#fff' });
+  return h;
+}
+// S10 now in WhatsApp and Discord
+function sApps(t) {
+  const S = 210, gap = 90, y = 330;
+  const kw = spring(seg(t, Wt(118) - .05, Wt(118) + .5)), kd = spring(seg(t, Wt(120) - .05, Wt(120) + .5));
+  const fl = (i) => 8 * Math.sin(t * 1.6 + i * 2);
+  // the Chatly tile is flown in by comp/compose.py (from the A-roll's top-right) and handed over here at 39.45, same pose
+  const pulse = 1 + .09 * Math.sin(Math.PI * seg(t, 40.17, 40.5));
+  let h = t >= 39.45 ? E(TILE('chatly', S), { x: 960 - S / 2, y: y + fl(0), w: S, h: S, s: pulse }) : '';
+  h += kline([P('to', 111), P('just…', 112), P('do', 113, { mk: 1, mt: Wt(113) }), P('it.', 114, { mk: 1, mt: Wt(113) })], t, { fs: 84, y: 640, gone: 40.22 });
+  if (t >= Wt(118) - .05) h += E(TILE('wa', S), { x: 960 - S / 2 - S - gap + (1 - kw) * 120, y: y + fl(1), w: S, h: S, s: lerp(.6, 1, kw), op: cl(kw * 2) });
+  if (t >= Wt(120) - .05) h += E(TILE('dc', S), { x: 960 + S / 2 + gap - (1 - kd) * 120, y: y + fl(2), w: S, h: S, s: lerp(.6, 1, kd), op: cl(kd * 2) });
+  // connecting dots
+  const kl1 = seg(t, Wt(118) + .1, Wt(118) + .4), kl2 = seg(t, Wt(120) + .1, Wt(120) + .4);
+  const dots = (x0, k) => Array.from({ length: 5 }, (_, i) => `<i style="position:absolute;left:${x0 + i * 16}px;top:${y + S / 2 - 4}px;width:8px;height:8px;border-radius:50%;background:#15181E;opacity:${(cl(k * 5 - i) * .25).toFixed(3)}"></i>`).join('');
+  h += `<div class="L">${dots(960 - S / 2 - gap + 8, kl1)}${dots(960 + S / 2 + 10, kl2)}</div>`;
+  if (t >= 40.3) h += kline([P('Now', 116), P('in', 117), P('WhatsApp', 118), P('and', 119), P('Discord.', 120)], t, { fs: 84, y: 640 });
+  return h;
+}
+// S11 you text it, the finished work comes back in the same chat
+function sTextIt(t) {
+  const k = eo(seg(t, 42.2, 42.6));
+  const ask = typed(DECK_ASK, t, 42.35, 42.9), sent = t >= 43.0;
+  const msgs = [{ day: 'Today' }, { me: true, html: DECK_ASK, t: 43.0, time: '9:41' }, { me: false, html: DECK_MSG(1.15) + '<div style="padding:6px 2px 0">Done. 5 slides, your numbers, speaker notes in.</div>', t: Wt(126) - .05, time: '9:42', style: 'width:300px;padding:4px' }];
+  const inner = waChat({ name: 'Chatly', status: 'online', av: CHATLY_AV(38), msgs, t, input: sent ? '' : ask, caret: !sent, typing: [43.15, Wt(126) - .05] });
+  const S = lerp(1.25, 1.5, eio(seg(t, Wt(126) + .1, 45.2)));
+  let h = cam(phone(inner, 960 - (PW + 28) / 2, 60 + (1 - k) * 90, { op: k }), S, 960, lerp(600, 700, eio(seg(t, Wt(126) + .1, 45.2))));
+  h += kline([P('You', 121), P('text', 122), P('it.', 123)], t, { fs: 80, x: 80, y: 440, w: 520, align: 'left', gone: Wt(124) - .1 });
+  h += kline([P('Finished', 125), P('work', 126), P('comes', 127), P('back', 128)], t, { fs: 72, x: 1380, y: 320, w: 500, align: 'left', gone: 45.25, wrap: true });
+  h += kline([P('in', 129), P('the', 130), P('same', 131, { mk: 1, mt: Wt(131) }), P('chat.', 132, { mk: 1, mt: Wt(131) })], t, { fs: 72, x: 1380, y: 560, w: 500, align: 'left', gone: 45.25, wrap: true });
+  return h;
+}
+// S12 slides, ads, your inbox summarized — three results, three chats
+function sThree(t) {   // one card that morphs: Slides (WhatsApp) -> Ad (Discord) -> Inbox summary (WhatsApp)
+  const k = spring(seg(t, 45.38, 45.95)); if (t < 45.38) return '';
+  const m1 = eio(seg(t, Wt(134) - .14, Wt(134) + .26)), m2 = eio(seg(t, Wt(137) - .14, Wt(137) + .26));
+  const w = [1 - m1, m1 * (1 - m2), m2];
+  const W = 620, H = 540 * w[0] + 660 * w[1] + 500 * w[2], X = 960 - W / 2, Y = 490 - H / 2;
+  const waBg = 'background-color:#EFEAE2;background-image:radial-gradient(rgba(150,130,100,.10) 1.2px,transparent 1.3px);background-size:22px 22px';
+  const layer = (wt, html) => wt < .01 ? '' : `<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:${cl(wt * 1.3).toFixed(3)};transform:scale(${lerp(.93, 1, wt).toFixed(4)});${wt < .98 ? `filter:blur(${((1 - wt) * 10).toFixed(1)}px);` : ''}">${html}</div>`;
+  const inner = `<div style="position:absolute;inset:0;${waBg};opacity:${(w[0] + w[2]).toFixed(3)}"></div><div style="position:absolute;inset:0;background:#313338;opacity:${w[1].toFixed(3)}"></div>
+    ${layer(w[0], `<div class="ios"><div class="bub them" style="max-width:none;width:390px;padding:5px;zoom:1.2">${DECK_MSG(1.6)}<span class="tm">9:42</span></div></div>`)}
+    ${layer(w[1], `<div style="display:flex;gap:14px;width:560px;font-family:'gg sans','Noto Sans',Helvetica,Arial,sans-serif"><div style="flex:none">${CHATLY_AV(46)}</div><div style="flex:1"><div style="font-size:19px;font-weight:600;color:#F2F3F5">Chatly <span style="display:inline-flex;align-items:center;height:17px;padding:0 5px;border-radius:4px;background:#5865F2;color:#fff;font-size:11px;font-weight:600;vertical-align:2px">APP</span> <span style="font-size:13px;font-weight:400;color:#949BA4;margin-left:4px">Today at 9:42 AM</span></div>
+      <div style="font-size:18px;color:#DBDEE1;margin:4px 0 12px">Here’s your launch ad.</div>${AD_IMG(470, 540, 1.2)}</div></div>`)}
+    ${layer(w[2], `<div class="ios"><div class="bub them" style="max-width:none;width:470px;font-size:24px;line-height:35px;padding:18px 20px 12px">${INBOX_MSG}<span class="tm">9:43</span></div></div>`)}`;
+  const tiles = ['wa', 'dc', 'wa'].map((kind, i) => w[i] < .01 ? '' : `<div style="position:absolute;left:${W / 2 - 55}px;top:-66px;opacity:${cl(w[i] * 1.5).toFixed(3)};transform:scale(${lerp(.6, 1, w[i]).toFixed(3)}) rotate(${((1 - w[i]) * (i === 1 ? 12 : -12)).toFixed(1)}deg)">${TILE(kind, 110)}</div>`).join('');
+  const labels = ['Slides', 'Ads', 'Your inbox, summarized'].map((l, i) => w[i] < .01 ? '' : `<div class="kin" style="position:absolute;left:-200px;top:${H + 34}px;width:${W + 400}px;text-align:center;font-size:56px;opacity:${cl(w[i] * 1.4).toFixed(3)};transform:translateY(${((1 - w[i]) * 18).toFixed(1)}px);${w[i] < .98 ? `filter:blur(${((1 - w[i]) * 8).toFixed(1)}px);` : ''}">${l}</div>`).join('');
+  return E(`<div style="position:absolute;left:0;top:0;width:${W}px;height:${H.toFixed(1)}px;border-radius:34px;overflow:hidden;box-shadow:0 60px 120px -40px rgba(28,52,120,.4)">${inner}</div>${tiles}${labels}`,
+    { x: X, y: Y + (1 - k) * 70, w: W, h: H, s: 1.2 * lerp(.9, 1, k) * lerp(1, 1.03, seg(t, 45.9, 49)), op: cl(k * 2), b: (1 - cl(k * 1.4)) * 8 });
+}
+// S13 don't feel like typing? send a voice note
+function sVoice(t) {
+  const k = eo(seg(t, 48.75, 49.15));
+  const draft = 'Write the launch brief for VOLT, inclu';
+  const tIn = typed(draft, t, 49.2, 50.3), del = seg(t, 50.45, 50.85), shown = tIn.slice(0, Math.round(tIn.length * (1 - del)));
+  const recOn = t >= Wt(146) && t < Wt(150) + .2, el = cl(t - Wt(146), 0, 3.2);
+  const msgs = [{ day: 'Today' }, { me: true, html: DECK_ASK, time: '9:41' }, { me: false, html: 'Done. 5 slides, your numbers, speaker notes in.', time: '9:42' }];
+  const vn = `<div style="display:flex;align-items:center;gap:10px;width:250px"><div style="width:34px;height:34px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;flex:none"><svg width="14" height="16" viewBox="0 0 14 16"><path d="M2 1.5v13l11-6.5z" fill="#54656F"/></svg></div><div style="flex:1;display:flex;align-items:center;gap:2.5px;height:26px">${Array.from({ length: 30 }, (_, i) => `<i style="width:3px;border-radius:2px;height:${(4 + 18 * Math.abs(Math.sin(i * 1.7 + 2) * Math.sin(i * .43 + 1))).toFixed(1)}px;background:${i < 2 ? '#1DAA61' : '#8EA39A'}"></i>`).join('')}</div><span style="font-size:12px;color:#667781">0:03</span></div>`;
+  if (t >= Wt(150) + .2) msgs.push({ me: true, html: vn, t: Wt(150) + .2, time: '9:44' });
+  if (t >= 52.85) msgs.push({ me: false, html: 'On it. Launch brief coming up 🎧', t: 52.85, time: '9:44' });
+  const inner = waChat({ name: 'Chatly', status: 'online', av: CHATLY_AV(38), msgs, t, input: recOn ? '' : shown, caret: !recOn && t < Wt(146), rec: recOn ? { el } : null });
+  // camera on the input bar
+  const S = lerp(1.0, 1.6, eio(seg(t, 48.85, 49.5))) * lerp(1, 1.25 / 1.6, eio(seg(t, Wt(150) + .1, 52.7)));
+  const cy = lerp(540, 860, eio(seg(t, 48.85, 49.5))) + lerp(0, -120, eio(seg(t, Wt(150) + .1, 52.7)));
+  let h = cam(phone(inner, 960 - (PW + 28) / 2, 60 + (1 - k) * 90, { op: k }), S, 760, cy);
+  if (t < Wt(146) - .05) h += kline([P('Don’t', 142), P('feel', 143), P('like', 144), P('typing?', 145)], t, { fs: 84, x: 90, y: 380, w: 560, align: 'left', gone: Wt(146) - .3, wrap: true });
+  else h += kline([P('Send', 147), P('a', 148), P('voice', 149, { mk: 1, mt: Wt(149) }), P('note.', 150, { mk: 1, mt: Wt(149) })], t, { fs: 84, x: 90, y: 380, w: 560, align: 'left', gone: 52.55, wrap: true });
+  return h;
+}
+// S14 it all syncs to the web app — real Chatly app, Recents tagged with their chat app
+function sWeb(t) {
+  const k = eo(seg(t, 52.7, 53.1));
+  const RC = [['Launch brief for VOLT', 'wa', Wt(154)], ['Inbox summary', 'wa', Wt(154) + .18], ['VOLT launch ad', 'dc', Wt(154) + .36], ['Q3 review deck', 'wa', Wt(154) + .54]];
+  const recents = [...RC.map((r) => r[0]), 'Competitor pricing research', 'Weekly team update', 'Podcast intro music'];
+  const chat = CU.userBubble({ text: DECK_ASK }) + CU.turn(CU.working({ steps: [{ label: 'Pulling Q3 numbers', icon: 'search', state: 'done' }, { label: 'Building 5 slides', icon: 'slides', state: 'done' }], state: 'done', files: 1, doneLabel: 'Created 1 file' }),
+    CU.fileTiles({ items: [{ type: 'file', name: 'Q3 review.pptx' }], cols: 4 }));
+  let app = CU.appDesktop({ w: 1920, h: 1080, sidebar: { recents, active: 3, activeNav: '' }, navbar: { title: 'Q3 review deck' }, chatHTML: chat });
+  // tag the four synced chats with their app's mono icon (as chatly-web does: 16 px, tertiary) and slide them in
+  RC.forEach(([nm, src, t0], i) => { const kr = eo(seg(t, t0, t0 + .35));
+    app = app.replace(`<p>${nm}</p>`, `<p>${nm}</p><span class="src">${src === 'wa' ? WA_MONO(16) : DC_MONO(16)}</span>`).replace(`cu-sb-hist-${i}`, `cu-sb-hist-${i}" style="opacity:${kr.toFixed(3)};transform:translateX(${((1 - kr) * -30).toFixed(1)}px);background:${t > t0 + .35 && t < t0 + 1.2 ? 'rgba(152,194,255,.35)' : ''}`); });
+  const win = `<div style="position:absolute;left:0;top:0;width:1920px;height:1080px;border-radius:26px;overflow:hidden;box-shadow:0 60px 140px -40px rgba(28,52,120,.35);background:#fff">${app}</div>`;
+  // camera: whole app -> push onto the Recents list on "nothing gets lost"
+  const kz = eio(seg(t, Wt(160) - .3, Wt(160) + .5));
+  const S = lerp(.82, 2.3, kz), cx = lerp(960, 330, kz), cy = lerp(560, 540, kz);
+  let h = cam(E(win, { x: 0, y: (1 - k) * 60, w: 1920, h: 1080, op: k }), S, cx, cy);
+  if (kz < .5) h += '';
+  return h;
+}
+const sLive = (t) => kline([P('It’s', 163), P('live', 164, { mk: 1, mt: Wt(164) }), P('now.', 165)], t, { fs: 140, y: 450 });
+// S16 Settings -> Chat apps -> Connect -> WhatsApp is connected
+function settingsPage(t, { hlChat = 0, press = false } = {}) {
+  const row = (logo, name, desc, btn) => `<div class="st-row">${logo}<div style="flex:1;min-width:0"><div style="font-size:15px;font-weight:500;color:#0F0F0F">${name}</div><div style="font-size:14.5px;color:#6B6B6B;margin-top:2px">${desc}</div></div>${btn}</div>`;
+  const waLogo = `<div style="width:36px;height:36px;flex:none">${CU.icon('WhatsappCircleIcon', { size: 36 })}</div>`;
+  const dcLogo = `<div style="width:36px;height:36px;border-radius:10px;border:1px solid #E6E6E6;display:flex;align-items:center;justify-content:center;flex:none;box-sizing:border-box">${CU.icon('DiscordIcon', { size: 22 })}</div>`;
+  const nav = `<div class="st-nav"><div style="font-size:20px;font-weight:600;color:#0F0F0F;margin:0 10px 6px">Settings</div>
+    <div class="g">Account</div><div class="i">Your account</div><div class="i">Preferences</div>
+    <div class="g">Apps</div><div class="i on" style="${hlChat ? `box-shadow:0 0 0 ${(2 * hlChat).toFixed(1)}px #98C2FF` : ''}">Chat apps</div>
+    <div class="g">Workspace</div><div class="i">Overview</div><div class="i">Members</div><div class="i">Analytics</div></div>`;
+  const main = `<div class="st-main"><div style="font-size:26px;font-weight:600;color:#0F0F0F">Chat apps</div>
+    <div style="font-size:15px;color:#6B6B6B;margin-top:6px">Message Chatly from WhatsApp or Discord. Replies come back in the same chat.</div>
+    <div style="margin-top:40px;font-size:16px;font-weight:500;color:#0F0F0F">Your apps</div><div style="font-size:14px;color:#8A8A8A;margin:4px 0 14px">Each connection is yours. Other people can’t see your chats.</div>
+    <div class="st-card">${row(waLogo, 'WhatsApp', 'Text or send a voice note from your phone. Photos and files work too.', `<div class="st-btn" id="waConnect" style="${press ? 'transform:scale(.94);background:#E4E4E4' : ''}">Connect</div>`)}
+      ${row(dcLogo, 'Discord', 'DM the Chatly bot with /chatly. Long tasks run in the background and land here when done.', '<div class="st-btn">Connect</div>')}</div></div>`;
+  return `<div class="st-shell" style="left:0;top:0;width:1500px;height:820px">${nav}${main}</div>`;
+}
+function connectDialog(t, t0) {
+  const phoneTxt = typed('+1 415 555 0132', t, t0 + .1, t0 + .55), done = t >= Wt(175) - .05;
+  const kd = eo(seg(t, Wt(175) - .05, Wt(175) + .3));
+  const body = !done ? `<div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:30px">${CU.icon('WhatsappCircleIcon', { size: 56 })}<div style="font-size:20px;font-weight:600">Connect WhatsApp</div></div>
+      <div style="font-size:14px;font-weight:500;color:#3A3A3A;margin:30px 0 8px">Phone number</div>
+      <div style="height:44px;border-radius:12px;border:1.5px solid #0F0F0F;display:flex;align-items:center;padding:0 14px;font-size:16px;gap:10px"><span>🇺🇸</span><span>${phoneTxt}</span></div>
+      <div style="display:flex;justify-content:flex-end;margin-top:26px"><div style="height:38px;border-radius:10px;background:#0F0F0F;color:#fff;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:500">Send code</div></div>`
+    : `<div style="display:flex;flex-direction:column;align-items:center;gap:12px;padding-top:24px;opacity:${kd.toFixed(3)};transform:scale(${lerp(.94, 1, kd).toFixed(3)})"><div style="position:relative">${CU.icon('WhatsappCircleIcon', { size: 56 })}<span style="position:absolute;right:-4px;bottom:-4px;width:22px;height:22px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center"><span style="width:18px;height:18px;border-radius:50%;background:#16A34A;display:flex;align-items:center;justify-content:center"><svg width="11" height="11" viewBox="0 0 12 12"><path d="M2.5 6.2l2.3 2.3 4.7-5" stroke="#fff" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></span></span></div>
+      <div style="font-size:20px;font-weight:600">WhatsApp is connected</div><div style="font-size:14px;color:#6B6B6B">•••• 0132 can now message Chatly.</div></div>
+      <div style="margin-top:22px;border-radius:16px;background:#F7F7F7;padding:16px;opacity:${kd.toFixed(3)}"><div style="font-size:13px;font-weight:500;color:#8A8A8A;margin-bottom:10px">Try sending</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">${['What’s on my calendar today?', 'Summarize this PDF', 'Draft a reply to Sara’s email', 'Plan my week'].map((p) => `<span style="border:1px solid #DADADA;background:#fff;border-radius:999px;padding:6px 12px;font-size:14px">${p}</span>`).join('')}</div></div>
+      <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:20px;opacity:${kd.toFixed(3)}"><div style="height:36px;border-radius:10px;background:#F1F1F1;display:flex;align-items:center;padding:0 14px;font-size:14px;font-weight:500">Open WhatsApp</div><div style="height:36px;border-radius:10px;background:#0F0F0F;color:#fff;display:flex;align-items:center;padding:0 16px;font-size:14px;font-weight:500">Done</div></div>`;
+  return `<div style="width:520px;border-radius:24px;background:#fff;padding:24px 28px 28px;box-sizing:border-box;box-shadow:0 40px 100px -20px rgba(0,0,0,.35);font-family:'Google Sans Flex','GS',sans-serif;color:#0F0F0F">${body}</div>`;
+}
+let CONNECT = { x: 1300, y: 520 };
+function sSettings(t) {
+  const k = eo(seg(t, 58.4, 58.85));
+  const click = Wt(172), press = t > click && t < click + .14;
+  let world = E(settingsPage(t, { hlChat: eo(seg(t, Wt(169), Wt(169) + .3)) * (1 - seg(t, click, click + .3)), press }), { x: 210, y: 130 + (1 - k) * 60, w: 1500, h: 820, op: k });
+  // dialog over a dim
+  const kd = eo(seg(t, click + .1, click + .4));
+  if (kd > 0) world += `<div class="L" style="background:rgba(10,12,20,${(.32 * kd).toFixed(3)});border-radius:26px"></div>` + E(connectDialog(t, click + .1), { x: 700, y: 210 + (1 - kd) * 30, w: 520, h: 600, op: kd, s: lerp(.96, 1, kd) });
+  // camera: push onto the Chat apps page, then centre the dialog
+  const kz = eio(seg(t, 58.6, 59.6)), kz2 = eio(seg(t, click, click + .5));
+  const S = lerp(1.05, 1.6, kz) * lerp(1, 1.55 / 1.6, kz2), cx = lerp(960, 1100, kz), cy = lerp(540, 420, kz);
+  let h = cam(world, S, lerp(cx, 960, kz2), lerp(cy, 500, kz2));
+  // pointer to Connect (measured)
+  if (t > 59.7 && t < click + .3) {
+    const kc = eio(seg(t, 59.75, click - .05));
+    h += E(CURSOR(54), { x: lerp(CONNECT.x + 240, CONNECT.x, kc) - 11, y: lerp(CONNECT.y + 200, CONNECT.y, kc) - 6, w: 54, h: 54, s: press ? .88 : 1, ox: .2, oy: .1, op: seg(t, 59.7, 59.85) * (1 - seg(t, click + .15, click + .3)), z: 9 });
+  }
+  if (t >= Wt(177) - .1) h += '';
+  return { html: h, after: () => { const el = document.querySelector('#waConnect'); if (el) { const r = el.getBoundingClientRect(); if (r.width > 4) CONNECT = { x: r.left + r.width / 2, y: r.top + r.height / 2 }; } } };
+}
+// S17 WhatsApp + Discord now. A lot more coming soon.
+function sSoon(t) {
+  const S = 150, gap = 40, n = 5, W = n * S + (n - 1) * gap, x0 = 960 - W / 2, y = 330;
+  let h = '';
+  ['wa', 'dc', 'plus', 'plus', 'plus'].forEach((kind, i) => { const t0 = i < 2 ? 62.7 + i * .12 : Wt(183) + (i - 2) * .14, k = spring(seg(t, t0, t0 + .5)); if (t < t0) return;
+    h += E(TILE(kind, S), { x: x0 + i * (S + gap), y: y + 6 * Math.sin(t * 1.5 + i * 1.3), w: S, h: S, s: lerp(.6, 1, k), op: cl(k * 2) * (i > 1 ? .9 : 1) }); });
+  h += kline([P('A', 181), P('lot', 182), P('more', 183), P('coming', 184), P('soon.', 185, { mk: 1, mt: Wt(185) })], t, { fs: 96, y: 590 });
+  return h;
+}
+
+/* ---------- schedule: [in, out, fadeIn, fadeOut, fn] ---------- */
+const SCN = [[0, 6.75, 0, .3, sHook], [6.6, 12.25, .25, .3, sLife], [12.2, 13.6, .2, .2, sThink], [13.45, 16.6, .2, 0, s180],
+  [16.6, 23.0, 0, .2, sList], [22.8, 25.98, .15, 0, sDetour], [26.0, 27.85, .2, .2, sNever], [27.7, 37.98, .2, 0, sReplies],
+  [38.8, 42.35, 0, .25, sApps], [42.15, 45.5, .2, .2, sTextIt], [45.3, 49.0, .15, .3, sThree],
+  [48.75, 52.95, .3, .25, sVoice], [52.7, 57.4, .25, 0, sWeb], [57.4, 58.5, .2, .2, sLive], [58.35, 62.85, .25, .3, sSettings],
+  [62.6, 65.01, .3, 0, sSoon]];
+window.T_END = 65.0;
+window.render = (t) => {
+  bg(t);
+  let html = '', after = [];
+  for (const [a, b, fi, fo, fn] of SCN) {
+    if (t < a || t >= b) continue;
+    const kin = fi ? sio(seg(t, a, a + fi)) : 1, kout = fo ? sio(seg(t, b - fo, b)) : 0;
+    let r = fn(t); if (typeof r === 'object') { after.push(r.after); r = r.html; }
+    html += layer(r, { op: kin * (1 - kout), b: (1 - kin) * 6 + kout * 6, s: lerp(1.015, 1, kin) * lerp(1, .99, kout) });
+  }
+  // corner bug (Chatly lockup top-left), hidden on the brand + apps beats
+  const hide = sio(seg(t, 37.4, 37.7)) * (1 - sio(seg(t, 42.1, 42.4)));
+  const kb = (1 - hide) * (1 - seg(t, 62.4, 62.7));
+  $('top').innerHTML = kb > 0 ? `<div style="position:absolute;left:46px;top:38px;opacity:${(kb * .62).toFixed(3)};color:#15181E">${LOCK(117, 29, 'currentColor')}</div>` : '';
+  $('sc').innerHTML = html;
+  after.forEach((f) => f && f());
+};
+document.fonts.load('500 40px "Google Sans Flex"').then(() => { window.READY = true; });
+</script></body></html>

@@ -1,0 +1,499 @@
+name	path	dur_s	peak_dbfs	centroid_hz	low_frac_<150Hz	high_frac_>4kHz	flatness	n_hits	prompt_or_note
+alarm	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/alarm.wav	1.5	-6.0	3099	0.0	0.0	0.0	9	code-synth tone
+alarm-ring	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep02/sfx/alarm-ring.wav	0.9	-5.5	2401	0.0	0.001	0.297	12	
+applause	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/applause.mp3	2.0	3.1	1462	0.008	0.024	0.406	4	applause
+apple_toss	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/apple_toss.mp3	0.8	-2.9	4595	0.0	0.484	0.682	1	
+ball-roll	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/ball-roll.mp3	1.48	2.0	391	0.174	0.0	0.104	4	heavy ball rolling
+bark	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/bark.wav	0.72	-1.3	523	0.001	0.0	0.001	2	code-synth tone
+bark	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/bark.wav	0.56	-54.7	900	0.0	0.0	0.186	2	
+bark1	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/bark1.wav	0.3	-1.3	523	0.001	0.0	0.0	1	code-synth tone
+bass	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s2/edit/sfx/bass.mp3	1.6	-1.1	65	0.968	0.0	0.0	1	
+beep	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/beep.wav	0.14	-22.5	1199	0.0	0.0	0.002	1	code-synth tone
+beep	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/beep.wav	0.18	-3.6	1917	0.001	0.004	0.04	0	
+bell	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/bell.mp3	4.0	-2.0	1414	0.0	0.0	0.028	4	bell toll
+bigha	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep33/sfx/bigha.wav	1.35	-1.4	595	0.006	0.001	0.109	6	
+birds	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/birds.mp3	2.0	0.0	4271	0.0	0.617	0.131	11	morning birdsong, outdoor day ambience
+blender	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep02/sfx/blender.wav	0.6	-16.4	117	0.98	0.0	0.001	5	code-synth tone
+blip	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep23/sfx/blip.wav	0.15	-7.0	1316	0.001	0.0	0.002	0	code-synth tone
+blorp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/blorp.wav	0.22	-4.5	298	0.016	0.0	0.0	1	code-synth tone
+boing	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/boing.wav	0.6	-3.4	451	0.163	0.0	0.0	1	code-synth tone
+boing	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep03/sfx/boing.wav	0.7	-0.9	379	0.001	0.0	0.001	1	
+boom	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/boom.mp3	1.48	-6.7	50	0.998	0.0	0.011	2	
+boom	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/boom.mp3	2.0	3.1	233	0.749	0.005	0.265	10	big boom / explosion hit
+boom	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/boom.mp3	3.48	2.5	61	0.957	0.0	0.011	15	a gigantic cinematic boom with a long dark reverb tail, logo reveal impact
+boom	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/boom.mp3	2.48	1.4	43	1.0	0.0	0.008	11	
+boom	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/boom.mp3	2.0	2.6	60	0.988	0.0	0.007	12	
+boom	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/boom.mp3	1.36	2.2	41	0.996	0.0	0.007	2	deep cinematic sub bass boom impact with short tail, no music
+boom	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/boom.mp3	2.0	3.0	105	0.792	0.0	0.009	7	
+boop	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/boop.wav	0.35	-5.2	681	0.024	0.0	0.001	1	code-synth tone
+braam	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/braam.mp3	3.0	2.8	49	0.992	0.0	0.011	15	trailer braam, distorted brass blast (big twist)
+braam	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/braam.mp3	2.0	2.6	134	0.863	0.001	0.107	18	a massive cinematic braam with a deep distorted 808 boom, trailer drop impact
+brandhit	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/brandhit.mp3	1.76	-0.5	57	0.998	0.0	0.009	4	
+brush	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/brush.mp3	1.6	-16.1	7621	0.022	0.925	0.594	21	
+brush	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep01/sfx/brush.wav	1.1	-42.4	4200	0.0	0.999	0.145	11	
+burp	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep03/sfx/burp.wav	0.5	-3.1	114	0.885	0.0	0.0	5	code-synth tone
+burst	/Volumes/Vyro-IT/Chatly-archive/reels/motion-tpl/sfx/burst.mp3	1.6	3.6	250	0.899	0.018	0.178	12	
+buzz	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/buzz.wav	0.45	-3.7	209	0.06	0.0	0.019	5	
+buzz	/Users/faseeh/Developer/Chatly/reels/sfx/buzz.wav	0.42	-6.8	157	0.847	0.0	0.019	2	
+buzz	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/buzz.wav	0.9	-1.9	204	0.001	0.0	0.0	2	
+cannon	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/cannon.mp3	1.48	2.7	116	0.779	0.0	0.02	7	
+car	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/car.wav	1.4	-6.0	96	0.977	0.0	0.0	14	code-synth tone
+card_slap	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/card_slap.mp3	0.6	-0.6	2432	0.158	0.17	0.728	1	a stiff paper card slapped and flipped onto a wooden table, crisp
+carwash	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/carwash.mp3	4.0	-1.9	5566	0.01	0.63	0.754	28	automatic car wash, spinning brushes, water spray, foam
+cash	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/cash.mp3	1.2	-2.0	6554	0.003	0.789	0.563	3	cash register ka-ching with coins
+chalk	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/chalk.wav	0.8	-43.8	2202	0.0	0.0	0.179	10	
+chalk_box	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_box.mp3	1.0	-11.5	1764	0.004	0.091	0.619	6	
+chalk_circle	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_circle.mp3	0.8	-12.9	6498	0.028	0.844	0.686	4	
+chalk_rings	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_rings.mp3	2.2	-6.5	3481	0.0	0.329	0.694	19	
+chalk_scrawl	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_scrawl.mp3	1.6	-15.0	6732	0.013	0.935	0.639	20	
+chalk_tap	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_tap.mp3	0.48	-11.7	7453	0.001	0.848	0.568	0	
+chalk_word	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/chalk_word.mp3	0.6	-7.2	4067	0.043	0.429	0.738	6	
+chargeup	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep23/sfx/chargeup.wav	0.6	-6.0	694	0.0	0.0	0.0	1	code-synth tone
+cheer	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/cheer.mp3	4.0	-0.3	1276	0.0	0.013	0.343	21	crowd cheer
+chime	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/chime.mp3	3.0	-4.4	7418	0.0	0.983	0.464	10	soft magic chime (also the outro chime)
+chime	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/chime.mp3	1.48	-10.9	5243	0.0	0.654	0.161	1	
+chime	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/chime.mp3	2.48	-6.3	3586	0.0	0.3	0.295	5	
+choir	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/choir.wav	2.56	-8.3	322	0.048	0.0	0.0	29	code-synth tone
+chomp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/chomp.wav	0.25	-2.2	163	0.13	0.0	0.001	0	code-synth tone
+chomp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/chomp.wav	0.25	-52.9	2504	0.0	0.001	0.129	2	
+chomp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/chomp.wav	0.2	-0.7	172	0.887	0.007	0.216	0	
+chomp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/chomp.wav	0.35	-0.5	151	0.261	0.0	0.003	1	code-synth tone
+chomp	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep05/sfx/chomp.wav	1.2	-3.2	246	0.688	0.013	0.18	1	
+circle	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/circle.mp3	0.8	-8.1	7241	0.019	0.94	0.573	8	one marker stroke drawing a circle on paper, single squeaky swipe
+clack	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep15/sfx/clack.wav	0.12	-4.8	2656	0.0	0.139	0.637	0	
+clang	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/clang.mp3	1.6	3.3	1558	0.015	0.038	0.479	1	metal clang
+clap	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/clap.mp3	0.6	-42.7	255	0.857	0.008	0.178	3	single clap
+clatter	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/clatter.mp3	1.76	3.2	1259	0.001	0.006	0.138	7	objects clattering (dishes, cutlery)
+click	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/click.mp3	0.48	-6.4	6535	0.001	0.884	0.605	2	
+click	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/click.mp3	0.48	-11.2	8423	0.0	0.874	0.503	1	small click
+click	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/click.mp3	0.48	-8.0	8272	0.001	0.912	0.531	5	
+click	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/click.mp3	0.48	-15.7	6677	0.0	0.739	0.515	5	
+click	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/click.mp3	0.48	-3.9	7962	0.001	0.886	0.437	3	
+click1	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/click1.mp3	0.48	-2.9	8006	0.001	0.922	0.334	2	crisp mouse click, clean UI
+click2	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/click2.mp3	0.48	-1.1	732	0.064	0.001	0.235	1	soft trackpad tap click
+coin	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/coin.mp3	0.48	-28.5	5452	0.001	0.517	0.371	0	
+coins	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/coins.mp3	2.0	-1.6	8743	0.001	0.985	0.546	19	cascade of coins pouring, money rain
+cough	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/cough.wav	0.9	-48.2	902	0.0	0.0	0.14	2	
+crack	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep11/sfx/crack.wav	0.45	-0.0	5452	0.0	0.645	0.788	1	
+crackle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/crackle.wav	6.0	-0.1	6013	0.0	0.733	0.754	16	
+creak	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/creak.wav	0.8	-3.6	397	0.154	0.0	0.0	10	code-synth tone
+creak	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep03/sfx/creak.wav	0.6	-0.5	212	0.676	0.002	0.254	2	
+creak	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep06/sfx/creak.wav	1.1	-1.2	333	0.273	0.003	0.308	1	
+creak	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep06/sfx/creak.wav	1.2	-13.2	362	0.121	0.011	0.338	16	
+creak	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/creak.wav	1.13	-15.3	304	0.111	0.0	0.001	13	code-synth tone
+creek	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep05/sfx/creek.wav	5.2	-5.9	282	0.286	0.0	0.037	66	
+cricket	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s1/edit/sfx/cricket.wav	2.6	-9.1	4680	0.0	1.0	0.101	9	
+crickets	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/crickets.mp3	5.0	1.0	4474	0.0	0.996	0.094	59	night crickets, quiet outdoor night / awkward silence
+crinkle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/crinkle.wav	0.9	-47.0	3800	0.0	0.001	0.111	7	
+crowd	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/crowd.mp3	4.0	3.3	1654	0.0	0.051	0.484	28	crowd murmur, busy town square
+crowd	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/crowd.mp3	4.0	0.1	961	0.0	0.001	0.125	38	huge stadium crowd cheering and clapping in rhythm
+crowd-gasp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/crowd-gasp.mp3	2.0	2.9	688	0.003	0.006	0.199	9	a crowd gasping in shock at once
+crowd_roar	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/crowd_roar.mp3	4.0	2.1	917	0.0	0.001	0.109	22	a massive stadium crowd erupting into a roaring cheer, sixty thousand people, huge
+crowd_scream	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/crowd_scream.mp3	3.0	2.3	1352	0.0	0.005	0.175	29	fans screaming with excitement behind barricades at a premiere, chaotic, close
+crumble	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/crumble.mp3	3.48	3.3	631	0.703	0.057	0.556	21	plaster / stone crumbling and falling debris
+crystal	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/crystal.mp3	2.0	-6.1	8961	0.001	0.982	0.481	11	crystal shimmer / magic sparkle
+dial	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/dial.mp3	0.6	-15.6	6294	0.001	0.686	0.635	5	
+ding	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/ding.mp3	1.2	-12.6	555	0.0	0.0	0.014	2	small notification ding
+ding	/Users/faseeh/Developer/Chatly/reels/sfx/ding.wav	1.1	-5.4	1544	0.0	0.0	0.002	1	
+ding	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/ding.mp3	0.8	-11.9	2041	0.001	0.066	0.076	0	phone notification ding, bright, modern
+ding	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/ding.mp3	0.8	-11.1	733	0.002	0.001	0.019	0	
+ding	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/ding.mp3	0.88	-25.0	3189	0.001	0.025	0.12	4	bright positive notification ding chime, single
+ding2	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/ding2.mp3	0.8	1.1	1277	0.0	0.014	0.097	1	payment received chime, two-tone, bright
+done	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/done.mp3	1.0	-0.4	1710	0.0	0.004	0.048	1	
+done	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/done.mp3	0.6	-8.5	1608	0.002	0.099	0.077	1	
+doorbell	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s9/edit/sfx/doorbell.mp3	2.4	-2.4	830	0.0	0.0	0.0	2	
+drip	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep35/sfx/drip.wav	0.26	-18.1	978	0.001	0.0	0.053	1	
+drop	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/drop.mp3	0.48	-5.2	397	0.008	0.0	0.014	1	small object drop
+drum	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep23/sfx/drum.wav	0.45	-1.2	64	0.998	0.0	0.001	1	code-synth tone
+engine	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/engine.wav	1.6	-6.9	134	0.634	0.0	0.009	17	code-synth tone
+engine	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep35/sfx/engine.wav	2.0	-7.4	155	0.981	0.012	0.496	24	
+explosion	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/explosion.mp3	2.48	2.8	113	0.86	0.0	0.021	20	a huge fiery explosion with debris and a deep rumbling tail
+fan	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/fan.wav	1.6	-5.8	159	0.583	0.0	0.015	21	code-synth tone
+ffwd	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/ffwd.wav	0.9	-8.3	4895	0.017	0.581	0.84	11	
+fire_roar	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/fire_roar.mp3	2.0	2.9	63	0.883	0.002	0.252	10	a roaring wall of fire erupting with a whoosh
+firebed	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/firebed.wav	6.0	-10.9	162	0.58	0.0	0.016	83	code-synth tone
+flap	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/flap.wav	0.6	-54.0	901	0.0	0.0	0.144	5	
+flash	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/flash.mp3	0.6	0.4	749	0.822	0.079	0.504	0	
+flash	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/flash.mp3	1.0	-20.0	1025	0.834	0.138	0.475	1	
+flash_burst	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/flash_burst.mp3	2.48	2.8	4304	0.001	0.457	0.662	26	a burst of many paparazzi camera shutters and flash pops firing rapidly, red carpet
+flash_one	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/flash_one.mp3	1.0	-3.7	2128	0.019	0.13	0.564	0	a single vintage camera flash pop with a high-pitched recharge whine
+flick	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/flick.wav	0.12	-1.5	6119	0.0	0.75	0.702	1	
+flutter	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep13/sfx/flutter.wav	0.7	-53.4	1408	0.0	0.001	0.273	5	
+flutter	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/flutter.wav	0.9	-50.0	1201	0.0	0.0	0.173	8	
+gallop	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/gallop.mp3	5.0	-4.9	734	0.024	0.008	0.108	46	running hooves / fast footsteps rhythm
+generate	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/generate.mp3	1.48	-3.6	926	0.854	0.105	0.554	4	magical digital power-up burst, sparkles and bass, button press
+giggle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/giggle.wav	0.45	-8.0	1180	0.0	0.0	0.049	3	
+giggle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/giggle.wav	0.6	-8.0	1799	0.049	0.12	0.017	2	code-synth tone
+giggle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/giggle.wav	1.0	-4.7	1258	0.074	0.013	0.016	8	code-synth tone
+glass	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/glass.mp3	0.8	-2.8	7424	0.002	0.964	0.366	4	a sharp sparkling glass shimmer whoosh, flash transition, bright and fast
+glitch	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/glitch.mp3	1.48	3.4	759	0.705	0.062	0.586	11	
+glitch	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/glitch.mp3	0.6	1.0	6521	0.002	0.807	0.726	9	digital glitch stutter (something wrong with reality)
+glitch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/glitch.mp3	0.48	-5.1	8745	0.002	0.904	0.614	4	
+glitch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/glitch.mp3	0.48	-5.7	3582	0.009	0.34	0.61	5	
+glitch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx2/glitch.mp3	0.8	3.4	3840	0.072	0.427	0.677	3	
+glitch	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/glitch.mp3	0.48	-5.9	7018	0.003	0.924	0.354	0	
+glitch	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/glitch.mp3	0.68	2.5	2191	0.005	0.144	0.589	6	short digital RGB glitch stutter hit, data corruption zap, no music
+glitch_stut	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/glitch_stut.mp3	0.8	-1.2	3877	0.001	0.379	0.685	7	short digital glitch stutter, data corruption
+glitch_tick	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/glitch_tick.mp3	0.48	1.3	4965	0.003	0.632	0.314	2	
+grow	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep38/sfx/grow.wav	0.22	-3.2	675	0.003	0.0	0.001	1	code-synth tone
+growl	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/growl.wav	1.1	-7.0	141	0.608	0.0	0.01	10	code-synth tone
+growl	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/growl.wav	1.3	-0.8	98	0.735	0.0	0.006	15	code-synth tone
+growl	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/growl.wav	1.6	0.0	75	0.842	0.0	0.003	15	code-synth tone
+gulp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/gulp.mp3	0.8	-3.4	347	0.018	0.0	0.033	2	nervous gulp / swallow
+gun	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/gun.mp3	1.48	3.3	72	0.939	0.001	0.146	3	
+haha	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep33/sfx/haha.wav	0.8	-1.5	964	0.0	0.002	0.136	4	
+harpsi	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/harpsi.mp3	1.2	-0.1	2224	0.013	0.218	0.371	1	a dramatic baroque harpsichord and string stab, royal palace flourish, short
+heart	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep06/sfx/heart.wav	0.7	-0.9	91	0.954	0.0	0.001	2	
+heart	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/heart.mp3	0.48	-3.4	772	0.003	0.001	0.035	2	tiny cute pop like a heart bubble
+heartbeat	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/heartbeat.mp3	1.0	2.5	67	0.975	0.0	0.01	1	single deep slow heartbeat thump (repeat for tension)
+heartbeat	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep05/sfx/heartbeat.wav	0.9	-0.9	56	0.996	0.0	0.001	2	
+heartbeat	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/heartbeat.mp3	1.2	2.4	42	0.999	0.0	0.008	3	two deep cinematic heartbeat thumps, powerful sub bass, close
+heehaw	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep33/sfx/heehaw.wav	1.77	-1.5	1010	0.0	0.001	0.153	3	
+hehe	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep33/sfx/hehe.wav	0.64	-1.6	631	0.0	0.002	0.159	4	
+heli	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep13/sfx/heli.wav	2.2	-5.2	144	0.621	0.0	0.012	21	code-synth tone
+hit	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/hit.mp3	1.2	2.9	48	0.991	0.0	0.007	7	
+hit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/hit.wav	0.35	-0.9	175	0.413	0.0	0.002	1	
+hit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/hit.mp3	4.0	1.3	56	0.997	0.0	0.007	11	
+honk	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/honk.wav	0.55	-8.4	587	0.003	0.001	0.095	7	
+horn	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/horn.wav	0.9	-12.6	353	0.0	0.0	0.027	4	
+howl	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/howl.wav	1.86	-12.6	626	0.0	0.0	0.001	19	code-synth tone
+howl	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/howl.wav	1.1	-8.0	643	0.048	0.0	0.0	2	code-synth tone
+howl	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/howl.wav	1.4	-6.0	565	0.086	0.0	0.0	2	code-synth tone
+hum	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/hum.wav	1.6	-6.1	389	0.075	0.0	0.0	13	code-synth tone
+impact	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/impact.mp3	1.48	3.1	91	0.939	0.002	0.014	7	
+impact	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cant-is-dead/audio/sfx/impact.mp3	3.0	3.3	89	0.932	0.001	0.057	10	
+impact	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/impact.mp3	2.0	-19.8	53	0.998	0.0	0.019	4	
+impact	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/impact.mp3	1.2	2.6	84	0.955	0.0	0.024	7	huge cinematic impact hit with metallic ring tail
+jingle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/jingle.wav	1.2	-5.0	3929	0.0	0.5	0.003	17	code-synth tone
+jingle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/jingle.wav	1.6	-7.4	902	0.0	0.0	0.001	8	code-synth tone
+kaching	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/kaching.mp3	1.48	2.8	5887	0.002	0.704	0.518	4	Cash register ka-ching, coins drop
+kettle	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep21/sfx/kettle.wav	1.6	-8.0	2907	0.0	0.022	0.001	13	code-synth tone
+keys	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/keys.mp3	2.48	-3.0	1981	0.453	0.262	0.52	11	
+keys	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/keys.mp3	2.48	1.5	4519	0.18	0.623	0.59	9	
+kiss	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/kiss.mp3	0.48	2.7	3361	0.0	0.365	0.485	1	a cute mwah kiss smack sound, short
+kitchen	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/kitchen.mp3	5.0	-21.1	122	0.43	0.0	0.095	62	small apartment at night, fridge hum, muffled city outside, people dancing on a wooden floor
+knock	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/knock.wav	0.7	-6.0	289	0.33	0.0	0.033	2	
+knock	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep35/sfx/knock.wav	0.25	3.0	110	0.849	0.0	0.01	1	code-synth tone
+knock	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/knock.wav	1.0	-0.7	181	0.065	0.0	0.002	2	code-synth tone
+lala	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/lala.wav	1.3	-9.1	460	0.001	0.0	0.0	5	code-synth tone
+lens	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/lens.mp3	0.6	-19.1	513	0.036	0.02	0.432	4	
+lick	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/lick.wav	0.35	-55.2	1599	0.0	0.0	0.181	3	
+lick	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep08/sfx/lick.wav	0.5	-9.2	508	0.055	0.001	0.113	5	
+lift	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/lift.wav	1.32	-10.6	1512	0.0	0.0	0.001	5	code-synth tone
+light-on	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/light-on.mp3	1.6	-15.8	924	0.856	0.12	0.295	5	lights powering on
+lvlup	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/lvlup.mp3	1.36	-3.1	6869	0.0	0.915	0.332	7	
+m-ch1	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch1.mp3	20.0	-4.7	66	0.972	0.0	0.035	28	
+m-ch10	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch10.mp3	20.0	1.0	493	0.441	0.009	0.231	246	
+m-ch2	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch2.mp3	20.0	0.8	454	0.664	0.026	0.379	169	
+m-ch3	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch3.mp3	20.0	1.4	630	0.416	0.016	0.319	227	
+m-ch4	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch4.mp3	20.0	-0.7	192	0.852	0.004	0.057	151	
+m-ch5	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch5.mp3	20.0	-1.0	288	0.699	0.009	0.079	131	
+m-ch6	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch6.mp3	20.0	-1.2	319	0.705	0.007	0.139	143	
+m-ch7	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch7.mp3	20.0	-5.4	301	0.029	0.0	0.012	195	
+m-ch8	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch8.mp3	20.0	0.4	453	0.546	0.016	0.361	224	
+m-ch9	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-ch9.mp3	20.0	-0.3	82	0.943	0.0	0.044	55	
+m-intro	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-intro.mp3	9.04	1.5	60	0.968	0.0	0.007	27	
+m-outro	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/m-outro.mp3	9.04	-6.9	292	0.135	0.0	0.019	18	
+m1-peace	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/m1-peace.mp3	20.0	-1.0	747	0.011	0.001	0.043	115	Cozy whimsical cartoon village morning: light pizzicato strings, glockenspiel, soft flute melody, gentle and cute, warm and innocent, steady calm tempo. Instrumental.
+m2-attack	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/m2-attack.mp3	20.0	-0.0	356	0.559	0.004	0.209	257	Ominous epic orchestral battle music for an anime war saga: thunderous taiko war drums, low brass stabs, dark Latin-style choir chanting, frantic strings, huge dramatic tension building, fierce and cinematic. Instrumental.
+m3-slow	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/m3-slow.mp3	20.0	0.7	619	0.033	0.002	0.049	69	Slow melancholic yet comedic music for time passing forever: lonely solo cello and a music box, sparse, sleepy, slightly absurd and sad, very slow tempo. Instrumental.
+m4-hero	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/m4-hero.mp3	20.0	-0.9	502	0.42	0.009	0.183	84	Rising heroic epic orchestral anthem for the final battle of an anime: starts with a magical shimmering reveal, then driving drums, soaring strings, triumphant brass fanfare and huge choir, unstoppable and glorious climax. Instrumental.
+m5-win	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/m5-win.mp3	20.0	0.5	945	0.143	0.013	0.203	155	Warm triumphant celebration finale: bright orchestra, bells and happy strings, joyful victory, then softly resolves to a calm peaceful ending. Instrumental.
+marker	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/marker.mp3	1.6	0.2	2489	0.003	0.18	0.412	11	
+match	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep15/sfx/match.wav	0.7	-11.4	3809	0.0	0.38	0.762	2	
+megaphone	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep10/sfx/megaphone.wav	0.45	-45.0	1397	0.0	0.0	0.105	2	
+mom	/Users/faseeh/Developer/Chatly/reels/chatly-cine/power/s5/edit/sfx/mom.aiff	1.61	-5.6	400	0.007	0.001	0.01	5	
+mom	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/mom.wav	1.67	-13.0	297	0.002	0.0	0.004	8	
+mom_s	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/mom_s.wav	1.15	-16.3	311	0.002	0.0	0.005	6	
+mower	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/mower.wav	1.4	-9.5	99	0.824	0.0	0.016	20	code-synth tone
+munch	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep03/sfx/munch.wav	0.9	-6.9	2991	0.049	0.28	0.762	3	
+musicbox	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/musicbox.wav	20.0	-2.2	654	0.014	0.0	0.001	36	code-synth tone
+nature	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/nature.mp3	1.48	3.9	638	0.695	0.052	0.349	5	a big fast whoosh that opens into birdsong and wind in a meadow
+neon	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/neon.mp3	1.2	-2.4	7620	0.002	0.924	0.682	7	neon sign flickering and humming on, electric buzz
+odm	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/odm.mp3	2.0	2.9	2021	0.434	0.221	0.601	1	
+office	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/office.mp3	4.0	0.5	2283	0.011	0.167	0.52	19	busy modern office floor ambience, chatter, keyboards
+offkey	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/offkey.wav	1.8	-5.2	623	0.147	0.0	0.0	16	code-synth tone
+opera	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/opera.wav	1.67	-10.5	564	0.002	0.0	0.001	18	code-synth tone
+orchhit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/orchhit.mp3	1.6	2.8	443	0.522	0.007	0.112	6	one huge orchestral hit, full strings brass and timpani slam together, epic trailer stab
+paper	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/paper.mp3	4.0	-7.5	4126	0.002	0.463	0.685	30	paper rustle / newspaper
+paper	/Volumes/Vyro-IT/Chatly-archive/reels/ca-clay08/audio/sfx/paper.mp3	1.0	-9.3	4075	0.069	0.489	0.718	1	
+paper	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/paper.mp3	0.8	1.6	6418	0.001	0.796	0.689	4	sheet of paper sliding quickly across a desk
+pass	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/pass.mp3	1.48	-2.8	1103	0.064	0.0	0.044	1	
+ping	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/ping.mp3	1.0	-1.0	4430	0.0	0.619	0.202	1	
+pixels	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/pixels.mp3	1.48	-0.0	4903	0.002	0.561	0.657	8	swarm of digital pixels assembling, glittery data whoosh
+plug	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/plug.mp3	0.6	-10.9	3614	0.021	0.446	0.623	2	
+poof	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/poof.mp3	1.0	1.9	40	0.994	0.001	0.191	4	cartoon poof (appear / vanish)
+poof	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/poof.mp3	1.2	2.8	67	0.906	0.0	0.168	2	
+pop	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/pop.mp3	0.48	-30.9	6	0.998	0.0	0.031	2	
+pop	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/pop.mp3	0.48	0.4	897	0.001	0.016	0.156	2	small pop
+pop	/Users/faseeh/Developer/Chatly/reels/sfx/pop.wav	0.14	-3.2	759	0.003	0.0	0.002	0	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cant-is-dead/audio/sfx/pop.mp3	0.68	-23.1	132	0.762	0.002	0.064	1	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/pop.mp3	0.48	-26.9	1980	0.0	0.007	0.085	0	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/pop.mp3	0.48	0.9	326	0.04	0.0	0.013	1	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/pop.mp3	0.48	-6.6	850	0.033	0.0	0.087	0	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/pop.mp3	0.48	-8.8	314	0.091	0.0	0.022	0	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/pop.mp3	0.8	-29.1	3292	0.011	0.207	0.456	1	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/pop.mp3	0.48	2.6	559	0.017	0.0	0.024	1	
+pop	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/pop.mp3	0.48	-40.6	17	0.994	0.001	0.278	1	quick cartoon bubble pop, single
+pop1	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/pop1.mp3	0.48	-0.8	3539	0.008	0.316	0.321	1	
+pop2	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/pop2.mp3	0.48	-27.5	1192	0.0	0.019	0.091	1	
+pop_box	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/pop_box.mp3	0.48	0.6	1213	0.004	0.0	0.103	1	
+pow	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/pow.mp3	1.0	0.1	990	0.043	0.008	0.245	1	cartoon punch / ball hit pow
+powerdown	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep23/sfx/powerdown.wav	0.55	-4.4	488	0.009	0.0	0.0	1	code-synth tone
+powerup	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/powerup.mp3	1.2	0.7	3716	0.176	0.424	0.712	9	an electric energy power-up charge zap rising quickly into a bright crackle
+punch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/punch.mp3	0.88	3.6	371	0.759	0.017	0.086	5	a punchy cinematic hit with a whoosh in front, fast transition impact
+punch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/punch.wav	0.9	-0.9	153	0.849	0.0	0.002	1	
+purr	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep15/sfx/purr.wav	1.6	-4.5	54	1.0	0.0	0.0	23	code-synth tone
+quack	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/quack.wav	0.22	-62.3	655	0.0	0.0	0.134	1	
+quake	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/quake.mp3	4.0	1.0	1199	0.003	0.01	0.164	10	ground rumble / earthquake
+rain	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep05/sfx/rain.wav	20.0	-12.3	2512	0.001	0.208	0.646	273	
+rain-street	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/rain-street.mp3	6.0	2.9	2215	0.03	0.122	0.557	28	night street after rain, wet tyres, drips
+rattle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/rattle.wav	0.8	-2.9	6504	0.0	0.82	0.63	9	
+rec	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/rec.mp3	0.48	-1.1	1028	0.0	0.0	0.025	1	
+recstop	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/recstop.mp3	0.68	2.9	714	0.137	0.002	0.111	6	
+rev-cymbal	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/rev-cymbal.mp3	1.48	1.8	5815	0.001	0.853	0.614	1	reversed cymbal swell into a hit
+revcym	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/revcym.mp3	0.88	-0.8	6145	0.003	0.892	0.595	2	a short reverse cymbal swell rising into a hit, bright and fast
+reverse_swell	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/reverse_swell.mp3	1.2	2.0	5479	0.003	0.819	0.545	1	reverse cymbal swell sucking in
+revriser	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/revriser.mp3	2.0	-4.7	6068	0.0	0.767	0.614	8	
+rewind	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/rewind.wav	0.9	-33.0	1130	0.719	0.138	0.571	5	
+rewind	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/rewind.wav	0.9	-9.1	3900	0.0	0.484	0.038	13	
+ring	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/ring.wav	1.5	-12.0	439	0.001	0.0	0.001	12	code-synth tone
+ring	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep35/sfx/ring.wav	1.6	-3.3	1539	0.0	0.0	0.0	10	code-synth tone
+ring	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep06/sfx/ring.wav	2.6	-0.9	2802	0.0	0.0	0.001	11	
+ring	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s5/edit/sfx/ring.wav	1.4	-1.0	2200	0.0	0.0	0.0	8	
+rip	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep03/sfx/rip.wav	0.7	-42.0	2599	0.0	0.0	0.148	3	
+riser	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/riser.mp3	2.2	-1.9	218	0.297	0.0	0.007	10	
+riser	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/riser.mp3	3.0	-1.8	4196	0.0	0.446	0.686	16	
+riser	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/riser.mp3	2.0	3.6	796	0.625	0.045	0.127	7	tense riser into a hard stop (2 s)
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cant-is-dead/audio/sfx/riser.mp3	3.0	3.5	2879	0.016	0.237	0.667	8	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/riser.mp3	3.0	3.8	2694	0.013	0.205	0.497	23	an intense cinematic riser, white noise and strings screaming upward, ending abruptly at the peak
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s2/edit/sfx/riser.mp3	3.0	-0.9	634	0.0	0.002	0.147	5	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/riser.mp3	1.36	3.3	2226	0.003	0.17	0.623	13	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/riser.mp3	1.48	2.7	41	0.984	0.0	0.007	14	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/riser.mp3	3.0	0.4	2708	0.003	0.147	0.393	4	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/riser.mp3	2.0	1.9	2797	0.058	0.292	0.495	10	fast rising tension riser into a hit, synthetic, trailer
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/riser.mp3	2.0	3.6	1493	0.155	0.079	0.262	2	
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/riser.mp3	2.0	2.8	291	0.838	0.006	0.017	9	short tense whooshing riser building up fast, ends abruptly
+riser	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/riser.mp3	1.6	3.8	882	0.44	0.039	0.065	9	
+riser_big	/Volumes/Vyro-IT/Chatly-archive/reels/pillars/sfx/riser_big.mp3	1.6	3.4	4548	0.007	0.522	0.706	18	
+roar	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/roar.mp3	3.0	3.3	383	0.238	0.002	0.189	27	monster roar (creature reveal)
+rocket	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/rocket.mp3	3.0	3.0	1357	0.069	0.039	0.223	9	Cartoon rocket launch whoosh and blast off, fast
+room-tone	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/room-tone.mp3	4.0	-61.7	232	0.873	0.02	0.544	51	quiet dry room tone, soft air; loop low under every interior scene
+room-tone-2	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/room-tone-2.mp3	5.0	-15.1	250	0.716	0.013	0.276	61	alternate room tone / interior air
+rooster	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/rooster.wav	0.95	-41.6	1200	0.0	0.0	0.061	8	
+rumbling	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/rumbling.mp3	6.0	-1.0	49	0.999	0.0	0.007	16	long deep rumbling, something huge approaching
+rustle	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep11/sfx/rustle.wav	0.8	-53.5	3000	0.0	0.001	0.215	13	
+sand	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/sand.wav	0.8	-13.3	4550	0.0	0.5	0.75	1	
+scan	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/scan.mp3	2.48	-6.7	8628	0.001	0.995	0.382	37	a futuristic soft scanning hum with tiny data blips, analyzing photos
+scrape	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep11/sfx/scrape.wav	1.2	-41.4	421	0.001	0.0	0.106	11	
+scratch	/Volumes/Vyro-IT/Chatly-archive/reels/ca-clay08/audio/sfx/scratch.mp3	1.0	3.0	778	0.258	0.008	0.016	6	
+scratch	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s2/edit/sfx/scratch.mp3	0.55	-3.8	3800	0.006	0.352	0.743	7	
+scratch	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/scratch.mp3	0.8	3.3	764	0.441	0.015	0.069	8	vinyl record scratch stop
+scratch	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep08/sfx/scratch.wav	0.9	-58.4	4201	0.0	0.995	0.268	6	
+scratch	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/scratch.wav	1.0	-5.3	4934	0.0	0.627	0.657	7	
+scream	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/scream.mp3	3.0	3.0	1782	0.0	0.029	0.239	29	scream
+screech	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep27/sfx/screech.wav	1.4	-33.9	3203	0.0	0.001	0.234	14	
+scribble	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep35/sfx/scribble.wav	1.1	-53.1	3201	0.0	0.001	0.287	9	
+scribble	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/scribble.mp3	1.2	-12.3	6822	0.024	0.883	0.604	14	felt marker scribbling quickly on paper, squeaky strokes
+send	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/send.mp3	0.6	-6.9	1487	0.0	0.0	0.051	0	
+sfx-alarm	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-run/audio/sfx-alarm.mp3	1.2	-1.9	729	0.0	0.001	0.056	5	
+sfx-ding	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-run/audio/sfx-ding.mp3	1.0	-12.8	2251	0.001	0.237	0.153	4	
+sfx-hit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-run/audio/sfx-hit.mp3	2.0	-16.8	64	0.978	0.0	0.013	6	
+sfx-m1	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-m1.wav	20.0	2.7	949	0.235	0.036	0.554	20	
+sfx-m2	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-m2.wav	20.0	2.7	945	0.224	0.036	0.551	22	
+sfx-p1	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-p1.wav	20.0	2.7	621	0.599	0.017	0.274	14	
+sfx-p2	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-p2.wav	20.0	2.7	678	0.497	0.009	0.194	21	
+sfx-w1	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1.wav	20.0	1.7	939	0.125	0.004	0.07	24	
+sfx-w1mg	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1mg.wav	20.0	2.3	397	0.42	0.009	0.531	21	
+sfx-w1v3	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1v3.wav	20.0	2.5	897	0.216	0.009	0.535	20	
+sfx-w1v4	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1v4.wav	20.0	3.0	727	0.459	0.018	0.266	26	
+sfx-w1v5	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1v5.wav	20.0	3.0	723	0.461	0.017	0.256	26	
+sfx-w1v6	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w1v6.wav	20.0	3.0	1152	0.151	0.029	0.273	22	
+sfx-w2	/Volumes/Vyro-IT/Chatly-archive/reels/imagineart-videos/audio/sfx-w2.wav	20.0	3.0	1152	0.151	0.029	0.274	22	
+sfx-watch-start	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-run/audio/sfx-watch-start.mp3	0.8	-3.7	6499	0.001	0.996	0.356	5	
+sfx_ach	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_ach.wav	2.0	-1.4	1890	0.082	0.091	0.244	4	
+sfx_bell	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-human/night-before/audio/sfx_bell.mp3	1.48	-1.5	5142	0.001	0.488	0.366	3	
+sfx_bell	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/motion-life/audio/sfx_bell.mp3	2.0	-3.7	5457	0.001	0.919	0.227	6	
+sfx_buzz	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-human/night-before/audio/sfx_buzz.mp3	1.48	3.2	702	0.004	0.052	0.403	10	
+sfx_click	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/motion-life/audio/sfx_click.mp3	2.48	-3.4	7858	0.001	0.927	0.634	2	
+sfx_coin	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_coin.wav	1.6	-5.8	1857	0.0	0.058	0.235	2	
+sfx_crit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_crit.wav	1.6	3.5	654	0.676	0.037	0.33	3	
+sfx_fail	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_fail.wav	1.9	1.1	211	0.741	0.005	0.376	8	
+sfx_hit	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_hit.wav	1.35	1.4	435	0.726	0.028	0.435	1	
+sfx_impact	/Users/faseeh/Developer/Chatly/reels/chatly-circus/v2/sfx_impact.mp3	2.0	1.5	51	0.992	0.001	0.087	15	
+sfx_keys	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/motion-life/audio/sfx_keys.mp3	4.0	-2.1	4566	0.193	0.643	0.504	18	
+sfx_ko	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_ko.wav	2.6	4.0	471	0.728	0.04	0.525	10	
+sfx_photo	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/docs-life/audio/sfx_photo.mp3	1.48	-30.3	1988	0.012	0.145	0.632	5	
+sfx_ping	/Users/faseeh/Developer/Chatly/reels/chatly-circus/v2/sfx_ping.mp3	1.2	-3.3	887	0.0	0.001	0.081	1	
+sfx_pop	/Users/faseeh/Developer/Chatly/reels/chatly-circus/v2/sfx_pop.mp3	1.0	2.9	1182	0.0	0.0	0.052	7	
+sfx_pop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_pop.wav	1.3	-4.8	1463	0.192	0.052	0.274	2	
+sfx_quest	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_quest.wav	1.8	-0.5	1113	0.077	0.042	0.236	3	
+sfx_riser	/Users/faseeh/Developer/Chatly/reels/chatly-circus/v2/sfx_riser.mp3	2.2	2.6	1666	0.185	0.133	0.281	14	
+sfx_room	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/motion-life/audio/sfx_room.mp3	20.0	-31.0	503	0.534	0.016	0.373	248	
+sfx_room	/Volumes/Vyro-IT/Chatly-archive/reels/lifestyle/videos-dance-cheap/audio/sfx_room.mp3	20.0	-39.8	24	0.994	0.0	0.22	159	
+sfx_sea	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-human/two-employees/audio/sfx_sea.mp3	2.48	3.3	1173	0.184	0.048	0.539	8	
+sfx_slam	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_slam.wav	1.7	3.8	276	0.9	0.024	0.497	3	
+sfx_start	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_start.wav	2.2	0.7	938	0.447	0.04	0.224	5	
+sfx_type	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-human/two-employees/audio/sfx_type.mp3	2.48	-4.4	1991	0.061	0.109	0.474	3	
+sfx_xp	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s10/edit/audio/sfx_xp.wav	2.8	-7.1	968	0.378	0.042	0.247	28	
+shatter	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/shatter.mp3	4.0	1.8	49	0.998	0.0	0.008	11	glass shatter
+shatter	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/shatter.mp3	1.2	2.9	4781	0.07	0.614	0.575	4	
+shatter	/Volumes/Vyro-IT/Chatly-archive/reels/motion-tpl/sfx/shatter.mp3	1.36	3.8	3596	0.038	0.422	0.613	4	
+shimmer	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/shimmer.mp3	1.28	-2.3	6826	0.001	0.8	0.536	6	
+shimmer	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/shimmer.mp3	0.8	0.2	6099	0.005	0.834	0.59	1	light shimmer
+shimmer	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx2/shimmer.mp3	1.2	-0.1	6769	0.001	0.943	0.515	4	
+shimmer	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/shimmer.mp3	1.6	-3.0	6797	0.0	0.985	0.473	7	
+shock_blast	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/shock_blast.mp3	1.48	2.4	155	0.795	0.001	0.05	7	a magical energy shockwave blast, deep boom with a shimmering sweep
+shrink	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep38/sfx/shrink.wav	0.2	-3.1	1004	0.009	0.0	0.001	1	code-synth tone
+shutter	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep34/sfx/shutter.wav	0.44	1.9	6181	0.0	0.769	0.734	1	
+shutter	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/shutter.mp3	0.48	0.1	5357	0.003	0.691	0.757	2	
+shutter	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/shutter.mp3	0.48	1.6	4612	0.001	0.44	0.726	3	camera shutter click
+shutter	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/shutter.mp3	0.48	3.0	4464	0.001	0.477	0.731	4	
+sing	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/sing.wav	1.3	-8.0	701	0.107	0.0	0.0	5	code-synth tone
+siren	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/siren.wav	3.2	-4.3	487	0.0	0.0	0.0	2	code-synth tone
+siren	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep27/sfx/siren.wav	8.0	-4.9	629	0.0	0.0	0.0	2	code-synth tone
+siren	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep05/sfx/siren.wav	2.72	-12.0	1072	0.132	0.005	0.001	15	code-synth tone
+sizzle	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/sizzle.wav	1.6	-5.2	6438	0.0	0.809	0.673	19	
+skid	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep04/sfx/skid.wav	0.75	-55.5	2599	0.0	0.0	0.216	4	
+skid	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep21/sfx/skid.wav	0.9	-7.6	184	0.548	0.0	0.028	11	
+slam	/Users/faseeh/Developer/Chatly/reels/sfx/slam.wav	0.35	-0.1	91	0.991	0.001	0.011	1	
+slam	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/slam.mp3	0.6	-0.4	44	0.992	0.0	0.01	1	
+slam	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep01/sfx/slam.wav	0.4	-1.0	87	0.988	0.0	0.03	1	
+slash	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/slash.mp3	1.2	2.5	5516	0.006	0.772	0.605	6	
+slide	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep04/sfx/slide.wav	0.55	-17.9	69	1.0	0.0	0.003	4	code-synth tone
+slider	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/slider.mp3	0.6	-31.3	3243	0.006	0.283	0.668	4	
+slider	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/slider.mp3	1.2	-18.3	7443	0.001	0.913	0.575	20	
+slider	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/slider.mp3	1.2	-21.5	6903	0.001	0.902	0.657	15	
+slurp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/slurp.wav	0.8	-49.2	900	0.0	0.0	0.15	4	
+slurp	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/slurp.mp3	1.0	2.8	1296	0.0	0.043	0.493	11	slurping the last of a juice box through a straw
+slurp	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/slurp.wav	0.55	-48.1	902	0.0	0.0	0.137	6	
+smack	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/smack.wav	0.3	-2.5	344	0.021	0.0	0.002	0	code-synth tone
+smoke-beep	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep02/sfx/smoke-beep.wav	0.5	-6.9	3098	0.0	0.0	0.122	3	
+snap	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/snap.mp3	0.48	2.6	3617	0.04	0.255	0.582	1	
+snareroll	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/snareroll.mp3	3.0	3.9	3108	0.002	0.407	0.671	31	a building trap snare roll accelerating into a drop, getting louder
+sneeze	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/sneeze.wav	0.75	-55.4	2200	0.0	0.0	0.179	2	
+sneeze	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/sneeze.wav	0.9	-59.1	2200	0.0	0.0	0.25	3	
+sniff	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/sniff.wav	0.5	-50.8	3001	0.0	0.001	0.19	3	
+snore	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep23/sfx/snore.wav	1.2	-6.3	119	0.691	0.0	0.014	10	code-synth tone
+snore	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/snore.wav	2.4	-5.7	144	0.622	0.0	0.016	11	code-synth tone
+snore	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep12/sfx/snore.wav	2.4	-5.5	153	0.581	0.0	0.016	8	code-synth tone
+snow	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/snow.mp3	3.0	-5.0	993	0.006	0.0	0.142	34	
+sparkle	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/sparkle.mp3	1.0	-7.8	4648	0.001	0.392	0.304	1	
+sparkle	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/sparkle.mp3	1.36	-1.8	7075	0.001	0.975	0.469	5	a magical sparkle transformation chime, glittering bells sweeping up, animated movie magic
+sparkle	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/sparkle.mp3	1.48	-2.5	6927	0.0	0.972	0.432	7	glitter sparkle shimmer magical transformation
+spear	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/spear.mp3	2.0	3.6	878	0.401	0.054	0.124	14	
+spin	/Volumes/Vyro-IT/Chatly-archive/reels/motion-tpl/sfx/spin.mp3	0.8	-0.3	411	0.424	0.006	0.294	1	
+spit	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep33/sfx/spit.wav	0.55	-1.7	3786	0.031	0.423	0.743	1	
+splash	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/splash.wav	0.6	-4.5	4053	0.0	0.467	0.682	2	
+splash	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/splash.wav	0.9	-56.6	1800	0.0	0.0	0.107	6	
+splat	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep28/sfx/splat.wav	0.4	-12.0	207	0.61	0.0	0.1	2	
+squeak	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep24/sfx/squeak.wav	0.35	-8.0	1668	0.0	0.0	0.0	1	code-synth tone
+squeak	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/squeak.wav	0.35	-6.6	2171	0.011	0.145	0.003	1	code-synth tone
+squeak	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s2/edit/sfx/squeak.mp3	0.45	-1.8	2805	0.001	0.028	0.633	4	
+squeal	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/squeal.wav	0.6	-6.9	1800	0.0	0.0	0.0	1	code-synth tone
+squish	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep27/sfx/squish.wav	0.6	-6.5	156	0.627	0.0	0.041	5	
+squish	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep29/sfx/squish.wav	0.35	-45.5	901	0.0	0.0	0.131	3	
+squish	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep32/sfx/squish.wav	0.6	-7.7	187	0.523	0.0	0.045	4	
+squish	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep03/sfx/squish.wav	0.6	-8.1	162	0.623	0.0	0.054	3	
+stab	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/power/s2/edit/sfx/stab.mp3	2.2	-0.9	252	0.132	0.0	0.0	13	
+stamp	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/stamp.mp3	0.6	0.3	1768	0.098	0.143	0.605	2	
+stamp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/stamp.wav	0.3	-2.3	112	0.94	0.0	0.001	1	code-synth tone
+stamp	/Volumes/Vyro-IT/Chatly-archive/reels/attack-on-tabs/assets/sfx/stamp.mp3	1.0	3.3	2097	0.071	0.156	0.565	1	Rubber stamp thunk on paper
+stamp	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/stamp.mp3	0.6	3.4	1347	0.048	0.057	0.512	1	
+stamp-hit	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/stamp-hit.mp3	0.8	-10.8	45	0.989	0.001	0.071	1	punchy text-slam thump with snap
+steam	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/steam.mp3	3.0	0.8	6244	0.006	0.78	0.694	27	
+sting	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/sting.mp3	2.0	2.9	901	0.0	0.0	0.015	8	short uplifting brand logo sting, warm synth chime with soft sparkle, no vocals
+stomp	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/stomp.mp3	2.48	1.5	27	0.999	0.0	0.006	5	heavy giant footstep stomp
+store	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/store.mp3	4.0	-9.9	9866	0.056	0.936	0.411	50	convenience store fluorescent hum, fridge compressors, door chime
+strain	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep05/sfx/strain.wav	1.2	-4.5	210	0.516	0.0	0.001	10	code-synth tone
+street	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/street.mp3	4.0	-16.2	340	0.593	0.0	0.092	57	city street at night, traffic, distant horns
+strike	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/strike.mp3	2.48	3.1	974	0.075	0.004	0.22	7	a bowling ball smashing into pins, a perfect strike, loud crash of pins scattering in a bowling alley
+stutter	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/stutter.mp3	1.36	3.3	3266	0.003	0.315	0.725	15	a fast digital glitch stutter, chopped data bursts accelerating, aggressive electronic
+sub	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/sub.mp3	1.2	-11.1	64	0.998	0.0	0.01	3	short sub hit
+sub-drop	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/sub-drop.mp3	3.0	2.8	47	0.998	0.0	0.009	28	huge sub-bass drop with long rumble tail (reveal moment)
+sub_drop	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/sub_drop.mp3	2.0	2.6	43	0.999	0.0	0.01	13	deep sub bass drop boom, cinematic
+subdrop	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/subdrop.mp3	1.6	2.6	41	0.999	0.0	0.009	12	
+swell	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/swell.mp3	3.0	1.6	3224	0.0	0.362	0.282	7	soft swell / build
+swipe	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/swipe.mp3	1.0	2.6	39	0.894	0.0	0.079	1	
+swirl	/Volumes/Vyro-IT/Chatly-archive/reels/motion-tpl/sfx/swirl.mp3	1.2	3.3	1590	0.0	0.003	0.165	4	
+swish-fast	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/swish-fast.mp3	0.48	2.2	431	0.66	0.003	0.239	1	quick air swish
+swish_ui	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/swish_ui.mp3	0.6	-12.0	7602	0.0	0.967	0.399	2	soft digital UI swoosh, short, clean
+switch	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/switch.mp3	0.48	-6.5	5771	0.002	0.599	0.663	2	light switch click
+swoosh_up	/Volumes/Vyro-IT/Chatly-archive/reels/motion-tpl/sfx/swoosh_up.mp3	0.6	3.4	3029	0.0	0.262	0.55	2	
+sword_clash	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/sword_clash.mp3	1.48	4.0	687	0.857	0.081	0.267	5	a massive metallic sword clash with sparks and a ringing resonance, anime fight
+tap	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/tap.mp3	0.48	-36.7	1535	0.003	0.102	0.589	1	
+tap	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep25/sfx/tap.wav	0.9	-3.1	91	0.962	0.0	0.002	7	code-synth tone
+tape-stop	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/tape-stop.mp3	1.0	-2.0	224	0.527	0.0	0.02	9	tape stop: music winds down to a halt (hard silence beat)
+tapestop	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/v4/sfx/tapestop.mp3	0.8	-6.9	213	0.428	0.0	0.015	7	a tape stop, music slowing down and dying in half a second
+thud	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/thud.mp3	0.6	-10.6	4388	0.169	0.461	0.169	2	
+thud	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/thud.mp3	0.8	2.6	45	0.988	0.0	0.007	4	soft body/object thud
+thud	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep06/sfx/thud.wav	0.5	-1.2	225	0.824	0.007	0.159	1	
+thump	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx2/thump.mp3	0.8	-11.5	50	0.983	0.0	0.015	1	
+thump	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep22/sfx/thump.wav	0.5	-3.4	356	0.943	0.033	0.542	1	
+thunder	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/thunder.mp3	4.0	2.7	273	0.31	0.0	0.011	23	thunder crack and roll
+tick	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/tick.mp3	0.48	-5.2	8705	0.004	0.961	0.637	1	
+tick	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/tick.mp3	5.0	-8.7	3258	0.0	0.365	0.523	20	clock tick
+tick	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/tick.mp3	0.48	-17.1	7057	0.002	0.938	0.571	1	
+tick	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/tick.mp3	0.48	-15.4	2672	0.0	0.189	0.372	1	
+tick	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx2/tick.mp3	0.48	-17.6	6110	0.031	0.649	0.315	1	
+ticker	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/ticker.mp3	2.0	3.0	5322	0.002	0.712	0.498	29	fast digital counter ticking up, rapid clicks
+toggle	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/toggle.mp3	1.2	2.7	5300	0.083	0.702	0.47	3	a satisfying mechanical toggle switch flipping on with a heavy click and an electric power-up hum
+tone	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/tone.mp3	1.0	-31.2	250	0.001	0.0	0.036	6	
+toyclick	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep34/sfx/toyclick.wav	0.08	-22.5	1797	0.0	0.0	0.124	1	
+transform	/Volumes/Vyro-IT/Chatly-archive/reels/aot-recap-audio/sfx/transform.mp3	3.0	3.1	903	0.733	0.103	0.37	13	
+transform	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/transform.mp3	2.0	2.4	1007	0.762	0.087	0.559	6	magical transformation whoosh with sparkles and a bass thump
+truck	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep30/sfx/truck.wav	2.4	0.1	34	0.995	0.0	0.009	2	code-synth tone
+trumpet	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep02/sfx/trumpet.wav	1.3	-4.4	454	0.051	0.0	0.0	13	code-synth tone
+twang	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep15/sfx/twang.wav	0.6	-3.1	402	0.085	0.0	0.0	2	code-synth tone
+type	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/type.mp3	2.48	0.1	5351	0.018	0.755	0.658	10	
+typing	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/typing.mp3	3.0	2.5	2821	0.296	0.389	0.519	16	keyboard typing
+typing	/Volumes/Vyro-IT/Chatly-archive/reels/ca-clay08/audio/sfx/typing.mp3	1.2	-4.3	4169	0.112	0.545	0.581	13	
+typing	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/typing.mp3	1.28	-7.4	1269	0.599	0.167	0.416	10	
+typing	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/typing.mp3	4.0	-12.7	2567	0.37	0.33	0.532	19	
+typing	/Volumes/Vyro-IT/Chatly-archive/reels/impossible-v2/audio/sfx/typing.mp3	1.36	-1.3	4328	0.126	0.605	0.526	9	
+typing	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/typing.mp3	1.6	-2.3	5849	0.025	0.8	0.638	16	fast laptop keyboard typing burst, soft mechanical keys
+ui	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/ui.mp3	0.68	-4.4	5652	0.001	0.666	0.624	1	
+ui_burst	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/ui_burst.mp3	1.2	2.2	6825	0.006	0.944	0.607	1	a bright sparkly energy burst with a soft whoosh, for a button exploding into light rings
+ui_click	/Volumes/Vyro-IT/Chatly-archive/reels/as-katana/audio/sfx/ui_click.mp3	0.48	-13.9	2652	0.002	0.203	0.509	0	a single crisp modern UI click, tapping a send button, very short and clean
+vacuum	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep27/sfx/vacuum.wav	2.4	-43.4	900	0.0	0.0	0.105	14	
+vibrate	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/vibrate.mp3	1.0	2.8	209	0.004	0.001	0.213	10	phone vibrating on a wooden table
+volume	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep10/sfx/volume.wav	0.75	-8.6	894	0.001	0.0	0.075	6	
+waves	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/waves.mp3	6.0	-1.9	1558	0.102	0.049	0.514	36	ocean waves
+waves	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/waves.mp3	4.0	1.2	743	0.324	0.031	0.487	34	big ocean waves crashing on rocks
+whine	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/whine.wav	1.3	-7.0	1145	0.0	0.0	0.0	6	code-synth tone
+whip	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/whip.mp3	0.88	-1.4	811	0.106	0.007	0.314	2	
+whip	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/whip.mp3	0.6	3.0	719	0.409	0.004	0.256	1	whip-pan swish
+whip	/Volumes/Vyro-IT/Chatly-archive/reels/relight/audio/sfx/whip.mp3	0.68	2.9	1982	0.089	0.087	0.529	1	
+whip1	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/whip1.mp3	0.8	3.3	1950	0.079	0.088	0.499	1	fast cinematic camera whip pan whoosh, airy, sharp, modern trailer
+whip2	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/whip2.mp3	0.8	2.7	63	0.944	0.001	0.117	2	quick swish whoosh transition, tight and punchy, airy high end
+whip3	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/whip3.mp3	1.0	1.5	114	0.746	0.0	0.031	3	heavy whoosh with low rumble tail, fast transition
+whisper	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep21/sfx/whisper.wav	2.5	-18.8	3632	0.0	0.357	0.628	11	
+whistle	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep14/sfx/whistle.wav	0.16	-4.4	2931	0.0	0.0	0.001	1	code-synth tone
+whistle	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep21/sfx/whistle.wav	0.5	-24.1	2900	0.0	0.0	0.003	6	code-synth tone
+whistle2	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/episodes/ep26/sfx/whistle2.wav	0.7	-4.3	2968	0.0	0.0	0.0	3	code-synth tone
+whoosh	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/whoosh.mp3	0.8	3.5	247	0.742	0.005	0.121	2	
+whoosh	/Users/faseeh/Developer/Chatly/reels/chatly-sizzle/v2/sfx/whoosh.mp3	0.6	-0.1	1028	0.459	0.029	0.416	2	
+whoosh	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/whoosh.mp3	1.0	2.6	213	0.648	0.0	0.102	2	whoosh pass-by, general transition
+whoosh	/Users/faseeh/Developer/Chatly/reels/sfx/whoosh.wav	0.38	-14.8	1866	0.0	0.076	0.467	2	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cant-is-dead/audio/sfx/whoosh.mp3	0.88	2.5	3951	0.002	0.379	0.614	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-change/audio/sfx/whoosh.mp3	0.8	2.6	12	0.994	0.0	0.045	2	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/whoosh.mp3	0.8	1.6	132	0.69	0.0	0.037	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-launch-cut/audio/sfx/whoosh.mp3	0.8	1.5	234	0.533	0.0	0.063	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-spec-ad/audio/sfx/whoosh.mp3	1.0	2.5	1126	0.165	0.006	0.228	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx/whoosh.mp3	1.2	-1.5	144	0.639	0.0	0.014	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-yt-b44/audio/sfx2/whoosh.mp3	0.68	2.7	813	0.227	0.005	0.279	1	
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/lazy-grade/sfx/whoosh.mp3	0.8	2.7	326	0.494	0.001	0.17	2	smooth soft cloth swoosh transition, airy
+whoosh	/Volumes/Vyro-IT/Chatly-archive/reels/tierlist/sfx/whoosh.wav	0.38	-14.4	1786	0.001	0.074	0.462	2	
+whoosh-deep	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/whoosh-deep.mp3	0.88	2.8	33	0.995	0.0	0.008	2	deep heavy swoosh with low rumble
+whoosh-fast	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/whoosh-fast.mp3	0.6	2.9	273	0.831	0.01	0.405	1	very fast whip-pan whoosh, short
+whoosh2	/Volumes/Vyro-IT/Chatly-archive/reels/chatly-cine/sfx/whoosh2.mp3	0.6	2.4	2386	0.007	0.111	0.445	1	
+whooshbig	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/whooshbig.mp3	1.36	3.1	889	0.309	0.036	0.422	1	
+whooshcut	/Users/faseeh/Developer/Chatly/reels/chatly-chatapps/mix/sfx/whooshcut.mp3	0.68	2.9	216	0.767	0.002	0.221	2	
+wind	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/wind.mp3	5.0	-1.1	21	0.999	0.0	0.034	30	wind gust, empty outdoor air
+wind	/Volumes/Vyro-IT/Chatly-archive/reels/ia-influencer/audio/sfx/wind.mp3	5.0	-0.5	856	0.142	0.023	0.409	47	howling coastal gale on a cliff, waves crashing far below
+wind-air	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/wind-air.mp3	4.0	-19.1	12	0.996	0.0	0.243	30	soft airy wind bed
+window	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep07/sfx/window.wav	0.7	-6.0	248	0.0	0.0	0.001	7	code-synth tone
+yawn	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep10/sfx/yawn.wav	1.0	-4.4	131	0.534	0.0	0.001	6	code-synth tone
+yip	/Volumes/Vyro-IT/Chatly-archive/reels/one-rule/kit/episodes/ep16/sfx/yip.wav	0.28	-4.5	1449	0.0	0.0	0.001	1	code-synth tone
+zip	/Users/faseeh/Developer/Chatly/reels/one-rule/kit/assets/sfx/zip.mp3	0.68	0.9	687	0.001	0.014	0.018	4	zip
+zip	/Volumes/Vyro-IT/Chatly-archive/reels/aot-series/eps/ep03/sfx/zip.wav	0.18	-0.9	1799	0.0	0.0	0.0	1	

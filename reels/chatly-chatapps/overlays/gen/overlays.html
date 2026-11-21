@@ -1,0 +1,318 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<title>Chatly chat-apps overlays</title>
+<style>
+@font-face { font-family: 'GS'; src: url('../../../chatly-smb/brand/fonts/GoogleSansFlex.woff2') format('woff2'); font-weight: 1 1000; }
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: transparent; }
+body.preview { background: #c9ccd1; }
+#stage { position: absolute; inset: 0; font-family: 'GS', 'Google Sans', sans-serif; color: #15181E; -webkit-font-smoothing: antialiased; }
+.it { position: absolute; left: 0; top: 0; display: none; will-change: transform, opacity, filter; transform-origin: 50% 50%; }
+
+/* ---------- glossy 3D-ish app tile ---------- */
+.tile { position: relative; border-radius: 27%; overflow: visible; }
+.tile .face { position: absolute; inset: 0; border-radius: 27%; overflow: hidden;
+  box-shadow: inset 0 2px 1px rgba(255,255,255,.65), inset 0 -6px 12px rgba(0,0,0,.14), inset 0 0 0 1px rgba(255,255,255,.18); }
+.tile .gloss { position: absolute; left: 6%; right: 6%; top: 3%; height: 46%; border-radius: 40% 40% 50% 50% / 60% 60% 40% 40%;
+  background: linear-gradient(180deg, rgba(255,255,255,.55), rgba(255,255,255,.06)); pointer-events: none; }
+.tile .glyph { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; filter: drop-shadow(0 2px 2px rgba(0,0,0,.18)); }
+.tile .glyph svg { display: block; }
+.tile .badge { position: absolute; right: -8%; top: -8%; min-width: 30%; height: 30%; border-radius: 999px; background: #fff; color: #128C3E;
+  font-weight: 700; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,.22); opacity: 0; }
+
+/* ---------- ref-style chat chip (dark translucent) ---------- */
+.chip { background: rgba(21,24,30,.84); border: 1px solid rgba(255,255,255,.12); border-radius: 16px; padding: 10px 16px 11px; color: #fff;
+  box-shadow: 0 10px 28px rgba(0,0,0,.20); white-space: nowrap; }
+.chip .nm { font-size: 13px; font-weight: 600; letter-spacing: .01em; color: rgba(255,255,255,.55); margin-bottom: 3px; }
+.chip .tx { font-size: 19px; font-weight: 500; letter-spacing: -.01em; line-height: 1.25; }
+.chip.out { background: rgba(255,255,255,.95); color: #15181E; border-color: rgba(0,0,0,.06); }
+.chip.out .nm { color: rgba(21,24,30,.5); }
+.sys { background: rgba(21,24,30,.80); color: #fff; border-radius: 999px; padding: 12px 24px; font-size: 22px; font-weight: 550; white-space: nowrap;
+  box-shadow: 0 10px 28px rgba(0,0,0,.20); }
+
+/* ---------- notification banner ---------- */
+.notif { width: 440px; box-sizing: border-box; display: flex; gap: 14px; align-items: center; padding: 14px 18px 14px 14px; border-radius: 24px;
+  background: rgba(255,255,255,.93); box-shadow: 0 14px 34px rgba(0,0,0,.16), 0 2px 6px rgba(0,0,0,.08); }
+.notif .ic { width: 48px; height: 48px; flex: none; }
+.notif .bd { flex: 1; min-width: 0; }
+.notif .hd { display: flex; justify-content: space-between; font-size: 16px; font-weight: 650; }
+.notif .hd span:last-child { font-weight: 450; color: rgba(21,24,30,.45); font-size: 14px; }
+.notif .ms { font-size: 17px; color: rgba(21,24,30,.82); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- small cards ---------- */
+.card { border-radius: 20px; background: rgba(21,24,30,.86); color: #fff; box-shadow: 0 18px 44px rgba(0,0,0,.24); border: 1px solid rgba(255,255,255,.10); box-sizing: border-box; }
+.wall { width: 370px; height: 360px; padding: 16px 18px; overflow: hidden; position: relative; }
+.wall .nm { font-size: 13px; font-weight: 600; color: rgba(255,255,255,.55); margin-bottom: 8px; }
+.wall .scroll { position: absolute; left: 18px; right: 18px; top: 44px; bottom: 0; overflow: hidden;
+  -webkit-mask-image: linear-gradient(180deg, #000 70%, transparent 100%); }
+.wall .txt { font-size: 17px; line-height: 1.45; color: rgba(255,255,255,.92); }
+.reply { width: 370px; padding: 14px 16px 16px; }
+.reply .top { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; color: rgba(255,255,255,.65); }
+.reply .av { width: 30px; height: 30px; border-radius: 50%; background: #2a2f3a; display: flex; align-items: center; justify-content: center; }
+.reply .tx { font-size: 19px; font-weight: 500; margin: 10px 0 12px; }
+.reply .thumb { height: 170px; border-radius: 12px; background: linear-gradient(135deg, #f4efe6, #e7dccb); position: relative; overflow: hidden; color: #15181E; }
+.reply .thumb .k { position: absolute; left: 18px; top: 16px; font-size: 11px; font-weight: 700; letter-spacing: .12em; color: rgba(21,24,30,.5); }
+.reply .thumb .h { position: absolute; left: 18px; top: 38px; font-size: 30px; font-weight: 650; letter-spacing: -.03em; line-height: 1.02; }
+.reply .thumb .bar { position: absolute; left: 18px; bottom: 18px; height: 8px; border-radius: 4px; background: rgba(21,24,30,.16); }
+.reply .thumb .blk { position: absolute; right: 16px; top: 16px; bottom: 16px; width: 110px; border-radius: 8px; background: linear-gradient(160deg, #1d2129, #3a3f4a); }
+.reply .file { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 16px; font-weight: 550; }
+.reply .file small { font-weight: 450; color: rgba(255,255,255,.55); font-size: 14px; margin-left: auto; }
+.filechip { display: flex; align-items: center; gap: 12px; padding: 12px 16px; }
+.filechip .n { font-size: 18px; font-weight: 550; }
+.filechip .s { font-size: 13px; color: rgba(255,255,255,.55); }
+
+/* voice note pill (ref's dark pill with glowing green edge) */
+.voice { display: flex; align-items: center; gap: 14px; height: 84px; padding: 0 26px 0 14px; border-radius: 999px; background: rgba(21,24,30,.88);
+  box-shadow: 0 0 0 2px rgba(37,211,102,.85), 0 0 22px rgba(37,211,102,.45), 0 14px 34px rgba(0,0,0,.22); color: #fff; }
+.voice .mic { width: 56px; height: 56px; border-radius: 50%; background: #25D366; display: flex; align-items: center; justify-content: center; }
+.voice .wave { display: flex; align-items: center; gap: 5px; height: 50px; }
+.voice .wave i { display: block; width: 5px; border-radius: 3px; background: #fff; }
+.voice .tm { font-size: 20px; font-weight: 550; font-variant-numeric: tabular-nums; margin-left: 6px; }
+
+/* light window card (ref's macOS doc card, small) */
+.win { background: #fff; border-radius: 18px; box-shadow: 0 22px 50px rgba(0,0,0,.22), 0 2px 8px rgba(0,0,0,.08); overflow: hidden; color: #15181E; }
+.win .bar { height: 40px; display: flex; align-items: center; gap: 8px; padding: 0 14px; border-bottom: 1px solid #EDEDED; }
+.win .bar i { width: 11px; height: 11px; border-radius: 50%; background: #d9d9de; display: block; }
+.win .bar .url { margin-left: 14px; flex: 1; height: 24px; border-radius: 8px; background: #F4F4F5; font-size: 13px; color: rgba(21,24,30,.6); display: flex; align-items: center; padding-left: 10px; }
+.web .body { display: flex; height: calc(100% - 41px); }
+.web .side { width: 120px; border-right: 1px solid #EDEDED; padding: 14px 12px; box-sizing: border-box; }
+.web .side .sl { height: 10px; border-radius: 5px; background: #EDEDED; margin: 14px 0 0; }
+.web .main { flex: 1; padding: 16px 18px; }
+.web .ttl { font-size: 13px; font-weight: 600; color: rgba(21,24,30,.5); letter-spacing: .02em; margin-bottom: 10px; }
+.web .row { display: flex; align-items: center; gap: 10px; height: 54px; border-radius: 12px; padding: 0 10px; margin-bottom: 6px; background: #F7F7F8; }
+.web .row .t { font-size: 16px; font-weight: 550; }
+.web .row .src { display: flex; align-items: center; gap: 5px; font-size: 12px; color: rgba(21,24,30,.5); margin-top: 1px; }
+.web .row .ok { margin-left: auto; width: 24px; height: 24px; border-radius: 50%; background: #15181E; display: flex; align-items: center; justify-content: center; }
+.set { padding: 18px 18px 14px; }
+.set .h { font-size: 22px; font-weight: 650; letter-spacing: -.02em; }
+.set .d { font-size: 14px; color: rgba(21,24,30,.55); margin: 4px 0 14px; line-height: 1.35; }
+.set .rw { display: flex; align-items: center; gap: 12px; padding: 12px; border-radius: 14px; border: 1px solid #EDEDED; margin-bottom: 8px; position: relative; }
+.set .rw .nm { font-size: 16px; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+.set .rw .sb { font-size: 13px; color: rgba(21,24,30,.55); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 230px; }
+.set .btn { margin-left: auto; height: 36px; padding: 0 14px; border-radius: 12px; background: #F1F1F2; font-size: 14px; font-weight: 600; display: flex; align-items: center; flex: none; }
+.set .conn { font-size: 11px; font-weight: 650; padding: 3px 8px; border-radius: 999px; background: #15181E; color: #fff; opacity: 0; }
+</style></head>
+<body>
+<div id="stage"></div>
+<script type="module">
+import { ICON_SVG, icon, suite } from '../../../../reference/chatly-ui-kit/icons.js';
+if (location.hash === '#preview') document.body.classList.add('preview');
+
+// ---------- glyphs (all from the real product icons) ----------
+const WA_GLYPH = (s) => { // WhatsappCircleIcon without its green disc: white bubble outline + white handset
+  const raw = ICON_SVG.WhatsappCircleIcon;
+  const paths = raw.match(/<path[^>]*\/>/g);
+  const p1 = paths[0].replace('fill="#25D366"', 'fill="none"');
+  return `<svg viewBox="8.5 8.5 25 25" width="${s}" height="${s}">${p1}${paths[1]}</svg>`;
+};
+const DC_GLYPH = (s) => { const p = ICON_SVG.DiscordIcon.match(/<path[^>]*\/>/g)[1]; return `<svg viewBox="110 110 292 292" width="${s}" height="${s}">${p}</svg>`; };
+const LOGO = (s, c = '#fff') => icon('LogoIcon', { size: [s * 375 / 411, s], color: c });
+const GEAR = (s, c = '#2b2f37') => `<svg viewBox="2 2 12 12" width="${s}" height="${s}" fill="none" stroke="${c}" stroke-width="1.05" stroke-linecap="round" stroke-linejoin="round"><path d="m6.803 2.59-.384 1.025-1.323.776-1.055-.166a.87.87 0 0 0-.513.085.9.9 0 0 0-.38.367l-.358.646a.95.95 0 0 0 .072 1.043l.67.859v1.55l-.652.859a.94.94 0 0 0-.072 1.043l.358.646a.9.9 0 0 0 .38.367c.159.08.338.11.513.085l1.055-.166 1.305.776.384 1.024a.9.9 0 0 0 .327.428.87.87 0 0 0 .504.163h.75c.18 0 .356-.057.505-.163a.9.9 0 0 0 .327-.428l.384-1.024 1.305-.776 1.054.166a.87.87 0 0 0 .514-.085.9.9 0 0 0 .38-.367l.357-.646a.95.95 0 0 0-.071-1.043l-.67-.859v-1.55l.652-.859a.947.947 0 0 0 .071-1.043l-.357-.646a.9.9 0 0 0-.38-.367.87.87 0 0 0-.514-.085l-1.054.166-1.305-.776-.384-1.024a.9.9 0 0 0-.327-.428A.87.87 0 0 0 8.367 2h-.733a.87.87 0 0 0-.504.163.9.9 0 0 0-.327.428"/><path d="M6.514 9.026a1.89 1.89 0 0 1 .223-2.331c.335-.347.79-.541 1.263-.541.354 0 .7.108.993.311s.523.491.659.829c.135.337.17.708.101 1.066s-.239.687-.489.945a1.77 1.77 0 0 1-.915.506 1.74 1.74 0 0 1-1.033-.105 1.8 1.8 0 0 1-.802-.68"/></svg>`;
+const CHECK = (s, c = '#fff') => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="${c}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`;
+const PLUS = (s, c) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="${c}" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`;
+
+// tile looks: [face gradient, extrusion edge colour, glyph builder]
+const TILE = {
+  whatsapp: ['linear-gradient(170deg,#62F07F 0%,#2BD455 45%,#1DB847 100%)', '#14963a', (s) => WA_GLYPH(s * .62)],
+  discord:  ['linear-gradient(170deg,#8C95FF 0%,#5865F2 50%,#4752d8 100%)', '#3a43b8', (s) => DC_GLYPH(s * .64)],
+  chatly:   ['linear-gradient(170deg,#3a3f4b 0%,#1d2129 55%,#121419 100%)', '#07080a', (s) => LOGO(s * .50)],
+  settings: ['linear-gradient(170deg,#f4f5f7 0%,#d9dce2 60%,#c4c8d0 100%)', '#9fa4ad', (s) => GEAR(s * .62)],
+  ghost:    ['linear-gradient(170deg,rgba(255,255,255,.80),rgba(255,255,255,.55))', 'rgba(0,0,0,.08)', (s) => PLUS(s * .36, 'rgba(21,24,30,.55)')],
+  // white glossy tiles holding the real colour suite / brand icons
+  slides: 'suite', docs: 'suite', sheets: 'suite', image: 'suite',
+  gmail: ['linear-gradient(170deg,#ffffff 0%,#f1f2f5 60%,#e3e5ea 100%)', '#c3c7cf', (s) => icon('GmailColoredIcon', { size: s * .6 })],
+};
+function tileHTML(kind, s, badge) {
+  let [bg, edge, g] = TILE[kind] === 'suite'
+    ? ['linear-gradient(170deg,#ffffff 0%,#f1f2f5 60%,#e3e5ea 100%)', '#c3c7cf', (z) => suite(kind, z * .66)]
+    : TILE[kind];
+  const ghost = kind === 'ghost';
+  const sh = `0 ${s * .055}px 0 ${edge}, 0 ${s * .16}px ${s * .28}px rgba(0,0,0,.22), 0 ${s * .05}px ${s * .08}px rgba(0,0,0,.12)`;
+  return `<div class="tile" style="width:${s}px;height:${s}px;box-shadow:${ghost ? '0 10px 24px rgba(0,0,0,.10)' : sh}">
+    <div class="face" style="background:${bg};${ghost ? 'border:2px dashed rgba(21,24,30,.28);box-sizing:border-box;' : ''}"></div>
+    ${ghost ? '' : '<div class="gloss"></div>'}<div class="glyph">${g(s)}</div>
+    ${badge ? `<div class="badge" style="font-size:${s * .19}px">1</div>` : ''}</div>`;
+}
+const waMini = (s) => `<div style="width:${s}px;height:${s}px">${tileHTML('whatsapp', s)}</div>`;
+
+// ---------- cue list (seconds; cuts from scene detection, words from src/words.json) ----------
+// enter: pop (tiles, spring) | rise (chips, ref-style fade+rise+deblur) | fly (cards, ref-style fly-in from lower right)
+// out: hard out at the cut (ref grammar) ; exit: soft exit start (0.25 s) when there is no cut
+// first frame of the next shot / 30 (exact, so the overlay never leaks one frame into the new shot)
+const C = { s1: 202 / 30, s2: 341 / 30, s4: 692 / 30, s5: 771 / 30, s7: 1130 / 30, s8: 1173 / 30, s10: 1470 / 30, s13: 1581 / 30, s14: 1711 / 30 };
+const items = [];
+const add = (o) => (items.push(o), o);
+const T = (kind, x, y, s, t0, end, extra = {}) => add({ type: 'tile', kind, x, y, s, t0, ...end, enter: 'pop', anchor: 'c', html: tileHTML(kind, s, extra.badge), ...extra });
+const chip = (x, y, nm, tx, t0, end, extra = {}) => add({ type: 'chip', x, y, t0, ...end, enter: 'rise', anchor: 'tl',
+  html: `<div class="chip ${extra.mine ? 'out' : ''}">${nm ? `<div class="nm">${nm}</div>` : ''}<div class="tx">${tx}</div></div>`, ...extra });
+const notif = (x, y, title, msg, t0, end) => add({ type: 'notif', x, y, t0, ...end, enter: 'rise', anchor: 'tl',
+  html: `<div class="notif"><div class="ic">${tileHTML('whatsapp', 48)}</div><div class="bd"><div class="hd"><span>${title}</span><span>now</span></div><div class="ms">${msg}</div></div></div>` });
+
+// Shot 1 · bean bag wide (0–6.73): "We plan trips / we fight / we even break up in the chat"
+notif(1330, 300, 'Babe ❤️', 'we need to talk.', 3.40, { out: C.s1 });
+
+// Shot 2 · close-up (6.73–11.37): "Your entire life happens around the chat except your actual job."
+T('whatsapp', 215, 200, 130, 7.14, { exit: 10.62 });
+T('discord', 405, 300, 116, 7.44, { exit: 10.66 });
+chip(95, 395, 'Friends 🏝️', '238 new messages', 7.82, { exit: 10.70 });
+T('docs', 1590, 200, 116, 9.48, { exit: 10.55 }, { dim: true });
+T('sheets', 1755, 320, 104, 9.70, { exit: 10.58 }, { dim: true });
+
+// Shot 4 · desk wide (11.93–23.07): "180 years … chatting … how we do everything … work, we have to leave."
+chip(95, 140, 'Mom', 'did you eat?', 14.70, { exit: 21.44 });
+chip(215, 238, 'Jake', 'lol send it', 15.36, { exit: 21.50 });
+chip(90, 336, 'Trip group', 'who’s booking the Airbnb', 15.82, { exit: 21.56 });
+chip(230, 434, 'Mia', 'omw 🏃', 16.46, { exit: 21.62 });
+chip(1505, 170, 'Landlord', 'rent’s due Friday', 17.92, { exit: 19.90 });
+chip(1560, 268, 'Gym', 'leg day?', 18.36, { exit: 19.96 });
+T('docs', 1610, 250, 120, 20.20, { out: C.s4 });
+T('slides', 1760, 405, 120, 20.48, { out: C.s4 });
+T('sheets', 1605, 555, 120, 20.84, { out: C.s4 });
+add({ type: 'sys', x: 330, y: 330, t0: 21.90, out: C.s4, enter: 'rise', anchor: 'c', html: '<div class="sys">You left</div>' });
+
+// Shot 5 · desk wide, magnifier (23.07–25.70): "And the work, it always ends up in the chat."
+const waS5 = T('whatsapp', 1690, 255, 140, 23.40, { out: C.s5 }, { badge: true, badgeAt: [25.05], bumpAt: 25.02 });
+add({ type: 'file', x: 1490, y: 430, t0: 23.88, out: C.s5, enter: 'rise', anchor: 'tl', flyTo: [1690, 255], flyAt: 24.66,
+  html: `<div class="card filechip">${suite('slides', 34)}<div><div class="n">final_FINAL_v3.pptx</div><div class="s">PowerPoint · 4.2 MB</div></div></div>` });
+
+// Shot 7 · desk wide (28.03–37.67): "AI in WhatsApp isn't new … just replies … ask for a slide … explanation"
+T('whatsapp', 290, 255, 140, 29.24, { exit: 33.30 });
+chip(95, 375, 'AI bot', 'Sure! Happy to help 😊', 31.10, { exit: 33.36 });
+chip(150, 473, 'AI bot', 'Great question!', 31.76, { exit: 33.42 });
+chip(1480, 160, '', 'can you make me a slide? 🙏', 33.86, { out: C.s7 }, { mine: true });
+add({ type: 'wall', x: 1480, y: 250, t0: 34.78, out: C.s7, enter: 'fly', anchor: 'tl', scrollFrom: 35.3,
+  html: `<div class="card wall"><div class="nm">AI bot</div><div class="scroll"><div class="txt">Sure! Here’s how you can make a slide yourself:<br><br>1. Open PowerPoint or Google Slides<br>2. Click “New slide”<br>3. Choose a layout that fits your content<br>4. Add a clear, short title<br>5. Keep bullet points to one line each<br>6. Pick a readable font, at least 24 pt<br>7. Add an image or chart if it helps<br>8. Check alignment and spacing<br>9. Save and share the file<br>10. Export it as a PDF<br>11. Rehearse before you present<br><br>Let me know if you’d like tips on design!</div></div></div>` });
+
+// Shot 8 · whisper (37.67–39.10): "So we built Chatly…"
+// Chatly tile is drawn by comp/compose.py (it flies into the MG centre tile)
+
+// Shot 10 · desk, typing on phone (40.17–49.00): "now on WhatsApp and Discord … text it … finished work comes back … Slides, ads, inbox summarized"
+T('whatsapp', 300, 245, 140, 41.12, { out: C.s10 });
+T('discord', 470, 405, 126, 41.72, { out: C.s10 });
+chip(1480, 140, '', 'turn my notes into a pitch deck', 42.76, { exit: 45.24 }, { mine: true });
+add({ type: 'reply', x: 1480, y: 222, t0: 43.46, exit: 45.30, enter: 'fly', anchor: 'tl',
+  html: `<div class="card reply"><div class="top"><div class="av">${LOGO(16)}</div>Chatly</div><div class="tx">Done. Here’s your deck.</div>
+  <div class="thumb"><div class="k">SEED ROUND · 2026</div><div class="h">Pitch<br>deck</div><div class="bar" style="width:120px"></div><div class="blk"></div></div>
+  <div class="file">${suite('slides', 26)}Pitch deck.pptx<small>12 slides</small></div></div>` });
+T('slides', 1585, 235, 130, 45.56, { out: C.s10 });
+T('image', 1745, 395, 130, 46.32, { out: C.s10 });
+T('gmail', 1590, 560, 130, 47.58, { out: C.s10 });
+
+// Shot 13 · bean bag, phone at ear (50.93–52.70): "just send a voice note."
+add({ type: 'voice', x: 130, y: 230, t0: 51.25, out: C.s13, enter: 'rise', anchor: 'tl',
+  html: `<div class="voice"><div class="mic">${icon('MicrophoneIcon', { size: 30, color: '#fff', sw: 1.8 })}</div><div class="wave">${'<i></i>'.repeat(26)}</div><div class="tm">0:01</div></div>` });
+
+// Shot 14 · side angle (52.70–57.03): "And it all syncs to the web app, so nothing gets lost."
+const row = (k, t, src, srcName) => `<div class="row"><div>${suite(k, 26)}</div><div><div class="t">${t}</div><div class="src">${src}<span>from ${srcName}</span></div></div><div class="ok">${CHECK(14)}</div></div>`;
+const waIco = icon('WhatsappCircleIcon', { size: 13 }), dcIco = icon('DiscordIcon', { size: 13 });
+add({ type: 'web', x: 1375, y: 120, t0: 53.90, out: C.s14, enter: 'fly', anchor: 'tl',
+  html: `<div class="win web" style="width:480px;height:330px"><div class="bar"><i></i><i></i><i></i><div class="url">chatlyai.app</div></div>
+  <div class="body"><div class="side">${icon('LogoWithText', { size: [72, 18], color: '#15181E' })}<div class="sl" style="width:80%"></div><div class="sl" style="width:60%"></div><div class="sl" style="width:70%"></div><div class="sl" style="width:50%"></div></div>
+  <div class="main"><div class="ttl">Recents</div>${row('slides', 'Pitch deck', waIco, 'WhatsApp')}${row('image', 'Sneaker ad', dcIco, 'Discord')}${row('docs', 'Inbox summary', waIco, 'WhatsApp')}</div></div></div>` });
+
+// Shot 15 · desk wide (57.03–67.80): "Go to settings, chat apps, and connect your number. WhatsApp and Discord now. … a lot more coming soon."
+// settings gear replaced by the real Chatly tile, drawn by comp/compose.py (290,280, 140 px, 58.62-63.20)
+add({ type: 'set', x: 1405, y: 150, t0: 59.50, exit: 63.26, enter: 'fly', anchor: 'tl',
+  html: `<div class="win set" style="width:450px;box-sizing:border-box"><div class="h">Chat apps</div><div class="d">Message Chatly from WhatsApp or Discord. Replies come back in the same chat.</div>
+  <div class="rw r0">${icon('WhatsappCircleIcon', { size: 36 })}<div><div class="nm">WhatsApp <span class="conn">Connected</span></div><div class="sb s0">Text or send a voice note from your phone.</div></div><div class="btn b0">Connect</div></div>
+  <div class="rw r1">${icon('DiscordIcon', { size: 36 })}<div><div class="nm">Discord</div><div class="sb">DM the Chatly bot with /chatly.</div></div><div class="btn">Connect</div></div></div>` });
+T('ghost', 1585, 270, 112, 63.90, { exit: 65.80 });
+T('ghost', 1740, 395, 112, 64.08, { exit: 65.86 });
+T('ghost', 1595, 520, 112, 64.26, { exit: 65.92 });
+
+// ---------- build DOM ----------
+const stage = document.getElementById('stage');
+items.forEach((it, i) => {
+  const el = document.createElement('div'); el.className = 'it'; el.innerHTML = it.html; stage.appendChild(el); it.el = el;
+  it.ph = (i * 1.7) % (Math.PI * 2);
+  it.badgeEl = el.querySelector('.badge');
+  it.bars = [...el.querySelectorAll('.wave i')]; it.tm = el.querySelector('.tm');
+  it.scroll = el.querySelector('.txt');
+});
+window.__items = items.map((it) => ({ type: it.type, kind: it.kind, t0: it.t0, out: it.out, exit: it.exit }));
+
+// ---------- easing ----------
+const cl = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
+const eOutCubic = (p) => 1 - Math.pow(1 - p, 3), eOutQuint = (p) => 1 - Math.pow(1 - p, 5), eInCubic = (p) => p * p * p;
+const eInOut = (p) => p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+const EXIT = 0.25;
+
+function state(it, t) {
+  const end = it.out ?? (it.exit + EXIT);
+  if (t < it.t0 || t >= end) return null;
+  const dt = t - it.t0;
+  let x = 0, y = 0, sc = 1, op = 1, bl = 0, rot = 0;
+  if (it.enter === 'pop') {
+    sc = 1 - 0.6 * Math.exp(-7 * dt) * Math.cos(12 * dt);
+    op = cl(dt / 0.12); bl = 6 * (1 - cl(dt / 0.18)); y += 26 * Math.exp(-8 * dt);
+    rot = -6 * Math.exp(-6 * dt);
+    // idle: gentle bob + sway
+    y += 5 * Math.sin(2 * Math.PI * 0.42 * dt + it.ph); rot += 1.6 * Math.sin(2 * Math.PI * 0.31 * dt + it.ph);
+  } else if (it.enter === 'rise') {
+    const p = eOutCubic(cl(dt / 0.42)); op = cl(dt / 0.25); y += 18 * (1 - p); bl = 6 * (1 - p); sc = 0.96 + 0.04 * p;
+    x += 5 * Math.sin(2 * Math.PI * 0.12 * dt + it.ph); y += 3 * Math.sin(2 * Math.PI * 0.17 * dt + it.ph);
+  } else if (it.enter === 'fly') {
+    const p = eOutQuint(cl(dt / 0.65)); op = cl(dt / 0.15); x += 240 * (1 - p); y += 200 * (1 - p); sc = 0.55 + 0.45 * p; bl = 14 * (1 - p);
+    y += 2.5 * Math.sin(2 * Math.PI * 0.2 * dt + it.ph);
+  }
+  if (it.exit != null && t >= it.exit) {
+    const q = eInCubic(cl((t - it.exit) / EXIT)); op *= 1 - q; sc *= 1 - 0.25 * q; bl += 6 * q; y -= 12 * q;
+  }
+  if (it.flyAt != null && t >= it.flyAt) { // file chip flies into the WhatsApp tile
+    const q = eInOut(cl((t - it.flyAt) / 0.40));
+    const w = it.el.firstElementChild.offsetWidth, h = it.el.firstElementChild.offsetHeight;
+    x += (it.flyTo[0] - (it.x + w / 2)) * q; y += (it.flyTo[1] - (it.y + h / 2)) * q; sc *= 1 - 0.8 * q; op *= 1 - cl((q - 0.7) / 0.3);
+    if (q >= 1) return null;
+  }
+  if (it.bumpAt != null && t >= it.bumpAt) { const b = t - it.bumpAt; sc *= 1 + 0.12 * Math.exp(-7 * b) * Math.sin(16 * b + 0.3); }
+  if (it.dim) op *= 1; // reserved
+  return { x, y, sc, op, bl, rot };
+}
+
+window.render = (t) => {
+  for (const it of items) {
+    const s = state(it, t);
+    if (!s || s.op <= 0.001) { it.el.style.display = 'none'; continue; }
+    const el = it.el; el.style.display = 'block';
+    const c = it.anchor === 'c' ? 'translate(-50%,-50%) ' : '';
+    el.style.transform = `translate(${it.x + s.x}px,${it.y + s.y}px) ${c}rotate(${s.rot}deg) scale(${s.sc})`;
+    el.style.opacity = s.op.toFixed(3);
+    el.style.filter = s.bl > 0.05 ? `blur(${s.bl.toFixed(2)}px)` : 'none';
+    // per-item extras
+    if (it.badgeEl) {
+      const n = (it.badgeAt || []).filter((b) => t >= b).length;
+      it.badgeEl.textContent = String(n || 1);
+      const last = Math.max(...(it.badgeAt || [0]).filter((b) => t >= b), -9);
+      const bd = t - last;
+      it.badgeEl.style.opacity = n ? 1 : 0;
+      it.badgeEl.style.transform = n ? `scale(${1 + 0.35 * Math.exp(-9 * bd) * Math.cos(14 * bd)})` : 'scale(.5)';
+    }
+    if (it.bars.length) {
+      const dt = t - it.t0;
+      it.bars.forEach((b, i) => {
+        const h = 8 + 34 * Math.abs(Math.sin(i * 1.3 + dt * 7.5) * Math.sin(i * 0.47 + dt * 3.1 + 1));
+        b.style.height = `${h.toFixed(1)}px`; b.style.opacity = 0.55 + 0.45 * (h / 42);
+      });
+      it.tm.textContent = `0:0${Math.min(9, 1 + Math.floor(dt * 2))}`;
+    }
+    if (it.scroll) { const d = Math.max(0, t - it.scrollFrom); it.scroll.style.transform = `translateY(${-Math.min(140, d * 80).toFixed(1)}px)`; }
+    if (it.type === 'web') {
+      const rows = el.querySelectorAll('.row');
+      rows.forEach((r, i) => { const p = eOutCubic(cl((t - (54.30 + i * 0.30)) / 0.35)); r.style.opacity = p; r.style.transform = `translateY(${(1 - p) * 10}px)`;
+        const ok = r.querySelector('.ok'); const q = t - (55.40 + i * 0.18); ok.style.transform = `scale(${q < 0 ? 0 : 1 - Math.exp(-9 * q) * Math.cos(13 * q)})`; });
+    }
+    if (it.type === 'set') {
+      const press = t - 60.30, b0 = el.querySelector('.b0'), cn = el.querySelector('.conn'), s0 = el.querySelector('.s0');
+      b0.style.transform = `scale(${press > 0 && press < 0.22 ? 0.92 : 1})`;
+      const done = t >= 60.55;
+      b0.textContent = done ? 'Open' : 'Connect';
+      cn.style.opacity = done ? 1 : 0;
+      s0.textContent = done ? '+1 ••• ••• 0142 · Connected just now' : 'Text or send a voice note from your phone.';
+      const hl = (k, at) => { const d = t - at; return d > 0 && d < 1.0 ? Math.sin(Math.PI * d / 1.0) : 0; };
+      el.querySelector('.r0').style.background = `rgba(37,211,102,${(0.14 * hl(0, 61.10)).toFixed(3)})`;
+      el.querySelector('.r1').style.background = `rgba(88,101,242,${(0.14 * hl(1, 61.85)).toFixed(3)})`;
+    }
+  }
+};
+document.fonts.ready.then(() => { window.render(0); window.READY = true; });
+</script>
+</body></html>

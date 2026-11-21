@@ -1,0 +1,53 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 2
+ScaledBorderAndShadow: yes
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Cap,Inter SemiBold,44,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,-0.6,0,1,0,0,2,80,80,170,1
+Style: Shd,Inter SemiBold,44,&H80000000,&H80000000,&H80000000,&H80000000,0,0,0,0,100,100,-0.6,0,1,0,0,2,80,80,170,1
+Style: Ink,Inter SemiBold,44,&H001E1815,&H001E1815,&H00000000,&H00000000,0,0,0,0,100,100,-0.6,0,1,0,0,2,80,80,170,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:07.04,0:00:08.60,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}Your entire life happens around the chat
+Dialogue: 1,0:00:07.04,0:00:08.60,Cap,,0,0,0,,{\pos(960,992)\an2}Your entire life happens around the chat
+Dialogue: 0,0:00:08.60,0:00:10.33,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}except your actual job
+Dialogue: 1,0:00:08.60,0:00:10.33,Cap,,0,0,0,,{\pos(960,992)\an2}except your actual job
+Dialogue: 0,0:00:12.46,0:00:13.58,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}Think about it
+Dialogue: 1,0:00:12.46,0:00:13.58,Cap,,0,0,0,,{\pos(960,992)\an2}Think about it
+Dialogue: 0,0:00:13.58,0:00:15.04,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}It took us 180 years
+Dialogue: 1,0:00:13.58,0:00:15.04,Cap,,0,0,0,,{\pos(960,992)\an2}It took us 180 years
+Dialogue: 0,0:00:15.04,0:00:16.83,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}to get really good at chatting
+Dialogue: 1,0:00:15.04,0:00:16.83,Cap,,0,0,0,,{\pos(960,992)\an2}to get really good at chatting
+Dialogue: 1,0:00:21.44,0:00:22.98,Ink,,0,0,0,,{\pos(960,992)\an2}we have to leave
+Dialogue: 1,0:00:22.98,0:00:23.88,Ink,,0,0,0,,{\pos(960,992)\an2}And the work
+Dialogue: 1,0:00:23.88,0:00:25.84,Ink,,0,0,0,,{\pos(960,992)\an2}it always ends up in the chat
+Dialogue: 0,0:00:25.88,0:00:27.86,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}It just never starts there
+Dialogue: 1,0:00:25.88,0:00:27.86,Cap,,0,0,0,,{\pos(960,992)\an2}It just never starts there
+Dialogue: 0,0:00:27.86,0:00:28.59,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}And yes
+Dialogue: 1,0:00:27.86,0:00:28.59,Cap,,0,0,0,,{\pos(960,992)\an2}And yes
+Dialogue: 0,0:00:28.94,0:00:30.03,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}AI in WhatsApp isn't new
+Dialogue: 1,0:00:28.94,0:00:30.03,Cap,,0,0,0,,{\pos(960,992)\an2}AI in WhatsApp isn't new
+Dialogue: 0,0:00:30.42,0:00:32.43,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}but most of it, it's just replies
+Dialogue: 1,0:00:30.42,0:00:32.43,Cap,,0,0,0,,{\pos(960,992)\an2}but most of it, it's just replies
+Dialogue: 1,0:00:33.02,0:00:34.78,Ink,,0,0,0,,{\pos(960,992)\an2}The minute you ask for a slide
+Dialogue: 1,0:00:34.78,0:00:36.22,Ink,,0,0,0,,{\pos(960,992)\an2}you'll get an explanation
+Dialogue: 1,0:00:36.22,0:00:37.37,Ink,,0,0,0,,{\pos(960,992)\an2}how to make one yourself
+Dialogue: 0,0:00:37.74,0:00:38.96,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}So we built Chatly
+Dialogue: 1,0:00:37.74,0:00:38.96,Cap,,0,0,0,,{\pos(960,992)\an2}So we built Chatly
+Dialogue: 1,0:00:53.00,0:00:55.06,Ink,,0,0,0,,{\pos(960,992)\an2}And it all syncs to the web app
+Dialogue: 1,0:00:55.06,0:00:56.69,Ink,,0,0,0,,{\pos(960,992)\an2}so nothing gets lost
+Dialogue: 0,0:00:57.08,0:00:58.54,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}It's live now
+Dialogue: 1,0:00:57.08,0:00:58.54,Cap,,0,0,0,,{\pos(960,992)\an2}It's live now
+Dialogue: 0,0:00:58.54,0:01:00.26,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}Go to settings, chat apps
+Dialogue: 1,0:00:58.54,0:01:00.26,Cap,,0,0,0,,{\pos(960,992)\an2}Go to settings, chat apps
+Dialogue: 0,0:01:00.26,0:01:01.16,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}and connect your number
+Dialogue: 1,0:01:00.26,0:01:01.16,Cap,,0,0,0,,{\pos(960,992)\an2}and connect your number
+Dialogue: 0,0:01:01.16,0:01:02.67,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}WhatsApp and Discord now
+Dialogue: 1,0:01:01.16,0:01:02.67,Cap,,0,0,0,,{\pos(960,992)\an2}WhatsApp and Discord now
+Dialogue: 0,0:01:03.34,0:01:04.97,Shd,,0,0,0,,{\blur5\pos(961,994)\an2}And yeah, a lot more coming soon
+Dialogue: 1,0:01:03.34,0:01:04.97,Cap,,0,0,0,,{\pos(960,992)\an2}And yeah, a lot more coming soon

@@ -1,0 +1,9 @@
+<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="../../../reference/chatly-ui-kit/chatly-ui.css">
+<style>html,body{margin:0;background:transparent}#t{position:absolute;left:150px;top:110px}</style></head><body><div id="t"></div>
+<script type="module">
+import CU from '../../../reference/chatly-ui-kit/chatly-ui.js';
+const s = 420, r = s * .235;
+const inner = `box-shadow:inset 0 ${(s * .03).toFixed(1)}px ${(s * .05).toFixed(1)}px rgba(255,255,255,.35),inset 0 -${(s * .04).toFixed(1)}px ${(s * .08).toFixed(1)}px rgba(0,0,0,.12),0 ${(s * .12).toFixed(1)}px ${(s * .28).toFixed(1)}px -${(s * .08).toFixed(1)}px rgba(20,30,70,.35)`;
+document.getElementById('t').innerHTML = `<div style="width:${s}px;height:${s}px;border-radius:${r}px;display:flex;align-items:center;justify-content:center;${inner};background:radial-gradient(120% 120% at 30% 20%,#2A3550,#0B1020 70%)">${CU.icon('LogoIcon', { size: s * .5, color: '#fff' })}</div>`;
+window.READY = true;
+</script></body></html>

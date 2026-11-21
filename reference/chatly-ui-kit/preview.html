@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chatly UI kit v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'GS';src:url('../../reels/chatly-styles/a/gsf.woff2') format('woff2');font-weight:100 1000;font-display:block}
+html,body{margin:0;background:#E4E4E8}
+body{padding:40px;font-family:'Google Sans Flex','GS',sans-serif;width:2000px;box-sizing:border-box}
+.sec{margin:0 0 56px}
+.sec>h2{font:600 26px/32px 'Google Sans Flex','GS',sans-serif;color:#111;margin:0 0 6px}
+.sec>p{font:400 15px/22px 'Google Sans Flex','GS',sans-serif;color:#555;margin:0 0 16px;max-width:1400px}
+.row{display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap}
+.cell{display:flex;flex-direction:column;align-items:flex-start;gap:8px}
+.lab{font:500 13px/16px ui-monospace,Menlo,monospace;color:#444}
+.fr{background:#fff;box-shadow:0 0 0 1px rgba(0,0,0,.08);position:relative;overflow:hidden}
+.pad{padding:24px}
+.col768{width:816px}
+/* stand-in image fills for the preview only (the kit leaves image slots empty) */
+</style>
+<link rel="stylesheet" href="chatly-ui.css">
+</head>
+<body>
+<div id="out"></div>
+<script type="module">
+import * as CU from './chatly-ui.js';
+const G = {
+  a: 'linear-gradient(135deg,#f6d365,#fda085)', b: 'linear-gradient(135deg,#a1c4fd,#c2e9fb)', c: 'linear-gradient(135deg,#84fab0,#8fd3f4)',
+  d: 'linear-gradient(135deg,#cfd9df,#e2ebf0)', e: 'linear-gradient(160deg,#30cfd0,#330867)', f: 'linear-gradient(135deg,#ff9a9e,#fecfef)',
+};
+const S = [];
+const sec = (title, note, body) => S.push(`<div class="sec"><h2>${title}</h2>${note ? `<p>${note}</p>` : ''}${body}</div>`);
+const cell = (label, html, st = '') => `<div class="cell"><div class="lab">${label}</div><div class="fr" style="${st}">${html}</div></div>`;
+const row = (...c) => `<div class="row">${c.join('')}</div>`;
+const slide = `<div style="position:absolute;inset:12% 10%;background:#fff;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,.08);padding:4%;font:600 22px/1.2 'Google Sans Flex',GS">Q3 board update<div style="font:400 12px/1.5 'Google Sans Flex',GS;color:#666;margin-top:10px">Revenue, retention and the plan for Q4</div></div>`;
+const page = `<div style="padding:16px 20px;font:400 10px/1.5 'Google Sans Flex',GS;color:#111"><div style="font:600 16px/1.3 'Google Sans Flex',GS;margin-bottom:8px">Spring launch plan</div>The spring drop goes live on March 4. This plan covers the timeline, owners and channels.<br><br><b>1. Timeline</b><br>Teaser on Feb 20, waitlist on Feb 25, launch on Mar 4.</div>`;
+
+/* 1 sidebar */
+sec('1 · sidebar()', 'Expanded 256 px (header: LogoWithText 88×22, Search, Collapse) and the 48 px collapsed rail. Nav order (incl. Prompt library [New], 11-13), badges and Chat apps logos are from SIDEBAR_NAV_ITEMS. Recents are sample titles.',
+  row(cell('sidebar({ active:0 })', CU.sidebar({ active: 0, height: 900 }), 'height:900px'),
+      cell('sidebar({ activeNav:"new-chat", hover:"new-chat", upgrade:true })', CU.sidebar({ activeNav: 'new-chat', hover: 'new-chat', upgrade: true, height: 900 }), 'height:900px'),
+      cell('sidebar({ expanded:false })', CU.sidebar({ expanded: false, height: 900 }), 'height:900px')));
+
+/* 2 navbar */
+sec('2 · navbar()', 'Chat navbar: context ring, title split button; right: Search (ghost, 16 px icon), New chat, Open artifacts (hidden when the drawer is open). No "Interface". Mobile: ≡ plus the three icons, no title.',
+  row(cell('navbar({ title })', CU.navbar({ title: 'Q3 board deck' }), 'width:1100px'),
+      cell('navbar({ title, drawerOpen:true })', CU.navbar({ title: 'Q3 board deck', drawerOpen: true }), 'width:832px'),
+      cell('navbar({ home:true, download:true })', CU.navbar({ home: true, download: true }), 'width:1100px'),
+      cell('navbar({ mobile:true })', CU.navbar({ mobile: true }), 'width:390px')));
+
+/* 3 home */
+sec('3 · home() inside appDesktop()', 'Greeting has no mark above it. Greeting, mode name, placeholder and use-case groups are remote config, so the text is a stand-in.',
+  cell('appDesktop({ homeHTML: home({ name:"Maya" }) })  1920×1080', CU.appDesktop({ homeHTML: CU.home({ name: 'Maya' }), navbar: { download: true } })));
+
+/* 3b home v2 */
+sec('3b · homeV2() inside appDesktop() · sidebar expanded', 'Dashboard V2 desktop home @ 0799197: no greeting; logo + announcement carousel; use-case carousel; Build / Create / Integrations; prompt box with the blue outline glow (settled state, beam finished). Announcements, use cases and card images are remote config, so they are stand-ins.',
+  cell('appDesktop({ homeHTML: homeV2() })  1920×1080', CU.appDesktop({ homeHTML: CU.homeV2() })));
+sec('3c · homeV2() · sidebar collapsed, typing, Ultra beam mid-run (beam:0.3)', 'beam is the 0–1 phase of the one-shot 1600 ms run (conic band rotates counter-clockwise once, fades in by 18 %, out after 72 %). glow fades in 1.3–2.1 s; outlineRunAt(ms) gives both.',
+  cell('appDesktop({ sidebar:{expanded:false}, homeHTML: homeV2({ prompt:{text, caret}, beam:0.3, glow:0, usecaseIndex:1 }) })', CU.appDesktop({ sidebar: { expanded: false }, homeHTML: CU.homeV2({ prompt: { text: 'Build a landing page for my coffee subscription, with pricing and an FAQ', caret: true }, beam: 0.3, glow: 0, usecaseIndex: 1, announcementIndex: 1, announcementProgress: 0.8 }) })));
+sec('3d · homeV2 Ultra beam phases', 'homeV2Prompt(): prompt area only, beam = 0.1 · 0.3 · 0.5 · 0.7 · 0.9 (glow 0), then t = 2100 ms (settled glow, no beam).',
+  `<div class="row">${[0.1, 0.3, 0.5, 0.7, 0.9].map((p) => cell('beam:' + p, `<div style="width:816px;padding:24px;background:#fff">${CU.homeV2Prompt({ beam: p, glow: 0 })}</div>`)).join('')}${cell('t:2100', `<div style="width:816px;padding:60px 24px;background:#fff">${CU.homeV2Prompt({ t: 2100 })}</div>`)}</div>`);
+
+/* 4 prompt box */
+sec('4 · promptBox() + footer()', 'Empty: ghost mic + blue voice button. Typing / file attached: ghost mic + black ↑ send with shadow-md. Typed text sits in .cu-typed.',
+  row(cell('promptBox({})', `<div class="pad col768">${CU.promptBox({})}${CU.footer()}</div>`),
+      cell('promptBox({ text, files:[pdf], skills:["Pitch deck"], caret:true })', `<div class="pad col768">${CU.promptBox({ text: 'Turn this into a 10-slide board deck', files: [{ name: 'Q3 report.pdf', size: '2.4 MB' }], skills: ['Pitch deck'], caret: true })}</div>`),
+      cell('promptBox({ state:"generating" })', `<div class="pad col768">${CU.promptBox({ state: 'generating' })}</div>`),
+      cell('promptBox({ mobile:true }) · 390', `<div style="width:390px;padding:16px">${CU.promptBox({ mobile: true })}${CU.footer({ mobile: true })}</div>`),
+      cell('promptBox({ mobile:true, text, files:[img] })', `<div style="width:390px;padding:16px">${CU.promptBox({ mobile: true, text: 'Make it brighter', files: [{ name: 'shot.png', thumb: G.b }] })}</div>`)));
+
+/* 5-10 thread */
+const thread = [
+  CU.userBubble({ text: 'Build me a board deck from this report', files: [{ name: 'Q3 report.pdf', size: '2.4 MB' }] }),
+  CU.turn(CU.thinkingRow('Cooking something up')),
+  CU.turn(CU.working({ steps: [{ label: 'Reading Q3 report.pdf', icon: 'files' }, { label: 'Web Search', icon: 'search', state: 'active' }] })),
+  CU.turn(CU.working({ expanded: true, steps: [{ label: 'Thinking', icon: 'thinking' }, { label: 'Reading Q3 report.pdf', icon: 'files' }, { label: 'Web Search', icon: 'search', detail: 'q3 saas board deck benchmarks', open: true }, { label: 'Generate Slides', icon: 'slides', state: 'active' }, { label: 'Publish', icon: 'publish', state: 'pending' }] })),
+  CU.turn(CU.working({ state: 'done', files: 2 })),
+  CU.turn(CU.working({ state: 'done', files: 2, expanded: true, steps: [{ label: 'Thinking', icon: 'thinking' }, { label: 'Web Search', icon: 'search' }, { label: 'Generate Slides', icon: 'slides' }, { label: 'Published 2 artifacts', icon: 'publish' }] }),
+    CU.reply({ md: '## Your deck is ready\nI turned the report into a **10-slide** board deck.\n- Revenue grew 18% quarter on quarter\n- Net retention is 112%\n- Q4 plan: two launches and one hire\n\nWant a one-page summary too?' }),
+    CU.docCard({ type: 'slides', title: 'Q3 board update', previewHTML: slide }),
+    CU.docCard({ type: 'docs', title: 'Spring launch plan', previewHTML: page }),
+    CU.fileTiles({ items: [{ name: 'Q3 numbers.xlsx' }, { name: 'Board memo.pdf' }, { type: 'image', thumb: G.a }, { type: 'video', thumb: G.e }, { name: 'notes.md' }, { type: 'music', thumb: G.f, duration: '2:30' }, { name: 'report.docx' }, { name: 'deck.pptx' }], hover: 1 }),
+    CU.siteCard({ name: 'Mossa' }),
+    CU.siteCard({ name: 'Mossa', state: 'initializing', progress: 45 }),
+    CU.actions()),
+];
+sec('5–10 · thread: userBubble · working · reply · actions · docCard · fileTiles · siteCard', 'Transcript column 768. Working group: collapsed running (shimmer + live row), expanded running (rows with rail, detail guide), done collapsed ("Created 2 files"), done expanded (✓ Done). No agent mark. Tile 2 shows the hover state.',
+  cell('768 transcript', `<div class="pad"><div class="cu" style="width:768px;display:flex;flex-direction:column;gap:8px">${thread.join('')}</div></div>`));
+
+/* 11/12 drawer chrome + action rows */
+const tabs = [{ type: 'slides', title: 'Q3 board update', active: true }, { type: 'docs', title: 'Spring launch plan' }, { type: 'sheets', title: 'Q3 numbers' }, { type: 'image', title: 'Images' }];
+const types = ['slides', 'docs', 'sheets', 'resume', 'contract', 'trip', 'graph', 'diagram', 'stocks', 'reddit', 'image', 'video', 'music', 'all'];
+sec('11 · drawer() top bar + 12 · actionRow(type)', 'Top bar 64 px: All artifacts folder, tab chips (suite icon 18, 12 px, max 130), +, Pop out / Maximize / Close. Rows below are every per-type action row at 1164 px (70 %) panel width. Research and in-agent Sites have none.',
+  cell('drawer({ tabs, actionRow:"slides" }) top', CU.drawer({ tabs, actionRow: 'slides', bodyHTML: '', w: 1164, h: 150 })) +
+  '<div style="height:24px"></div>' +
+  cell('actionRow(type) for each type', `<div class="cu" style="width:1164px;padding:16px 32px;display:flex;flex-direction:column">${types.map((t) => `<div class="lab" style="margin:6px 0">${t}</div>${CU.actionRow(t, { selected: 0 })}`).join('')}${'<div class="lab" style="margin:6px 0">resume + atsRing({score:86})</div><div style="position:relative;height:110px">' + CU.atsRing({ score: 86 }) + '</div>'}</div>`));
+
+/* 14/15 drawer bodies */
+const allItems = [{ type: 'slides', title: 'Q3 board update', previewHTML: `<div style="position:absolute;inset:0;background:#EDEDED">${slide}</div>` }, { type: 'sheets', title: 'Q3 numbers' }, { type: 'image', thumb: G.c }, { type: 'resume', title: 'Maya Chen resume' }, { type: 'trip', title: 'Lisbon in 4 days' }, { type: 'video', thumb: G.e }];
+sec('14 · allArtifacts() · launcher() · typeEmpty()', 'All artifacts grid (2 columns default, zoom slider, Select, disabled Share) and the launcher shown when there are none.',
+  row(cell('drawer({ allActive, bodyHTML: allArtifacts({items}) })', CU.drawer({ tabs, allActive: true, bodyHTML: `<div style="padding:0 16px">${CU.allArtifacts({ items: allItems, hover: 1 })}</div>`, w: 832, h: 1080 }).replace('cu-dr-panel">', 'cu-dr-panel">')),
+      cell('drawer({ tabs:[], bodyHTML: launcher() })', CU.drawer({ tabs: [], bodyHTML: CU.launcher({ hover: 'AI Document' }), w: 832, h: 1080 })),
+      cell('typeEmpty({category:"slides"})', `<div style="width:420px;height:300px">${CU.typeEmpty({ category: 'slides' })}</div>`)));
+
+sec('15 · mediaGrid() · genTile() · musicTile() · playerBar()', 'Image tab with the Generations|Templates tabs, model pill (remote config, "Auto" stand-in), settings; grid gap 16, 2 columns, one dot-field generating tile (spotlight hook --cu-spot-x/y). Tile 1 shows the hover overlay.',
+  row(cell('drawer({ tabs, actionRow:"image", bodyHTML: mediaGrid({ items, generating:1, hover:0 }) })', CU.drawer({ tabs: [{ type: 'image', title: 'Images', active: true }], actionRow: 'image', bodyHTML: CU.galleryBody(CU.mediaGrid({ items: [G.a, G.b, G.c], generating: 1, hover: 0 })), w: 832, h: 1080 })),
+      cell('drawer({ actionRow:"music", bodyHTML: galleryBody(mediaGrid({type:"music"}), playerBar()) })', CU.drawer({ tabs: [{ type: 'music', title: 'Music', active: true }], actionRow: 'music', bodyHTML: CU.galleryBody(CU.mediaGrid({ type: 'music', items: [{ thumb: G.f, title: 'Neon summer', time: '2:30' }, { thumb: G.e, title: 'Night drive', time: '3:05', progress: 40, playing: true }, { thumb: G.a, title: 'Morning run', time: '1:58' }] }), CU.playerBar({ title: 'Night drive', model: 'Music model', thumb: G.e, progress: 22, playing: true })), w: 832, h: 1080 }))));
+
+/* 13 sites */
+sec('13 · sitesBuilder() and the in-agent Sites drawer', 'Standalone builder chrome: Preview/Code/Cloud/More tabs, path field "/", device cycle, Interact/Edit, open, blue Publish; "Made with Chatly" badge. In chat, the Sites tab is only the live site in a rounded card.',
+  row(cell('sitesBuilder({ path:"/" })', CU.sitesBuilder({ w: 1100, h: 700, thumb: G.d })),
+      cell('drawer({ tabs:[sites], bodyHTML: sitesDrawerBody() })', CU.drawer({ tabs: [{ type: 'web', title: 'Mossa', active: true }], bodyHTML: CU.sitesDrawerBody({ thumb: G.d }), w: 760, h: 700 }))));
+
+/* 16 desktop compositions */
+const chat = [CU.userBubble({ text: 'Build me a board deck from this report', files: [{ name: 'Q3 report.pdf', size: '2.4 MB' }] }),
+  CU.turn(CU.working({ state: 'done', files: 1 }), CU.reply({ md: 'Your 10-slide board deck is ready. It covers revenue, retention and the Q4 plan.' }), CU.docCard({ type: 'slides', title: 'Q3 board update', previewHTML: slide }), CU.actions())].join('');
+const slidesBody = `<div style="position:absolute;inset:0;padding:12px 8px 0 168px;display:flex;flex-direction:column;gap:16px"><div style="aspect-ratio:16/9;border-radius:16px;box-shadow:0 4px 8px rgba(176,175,175,.2),0 0 0 3px rgba(0,136,255,.4);background:#EDEDED;position:relative;flex:none">${slide}</div></div><div style="position:absolute;left:12px;top:12px;bottom:12px;width:152px;border-radius:16px;background:rgba(255,255,255,.3);padding:8px;display:flex;flex-direction:column;align-items:center;gap:16px">${[1, 2, 3, 4].map((i) => `<div style="width:${i === 1 ? 124 : 104}px;aspect-ratio:16/9;border-radius:8px;border:1px solid ${i === 1 ? '#0088FF' : '#E0E0E0'};background:#EDEDED"></div>`).join('')}</div>`;
+sec('16 · appDesktop() 1920×1080 with the slides drawer (70 %)', 'Sidebar 256 + chat column + drawer. Drawer width = floor((1920−256) × 0.7) = 1164; 50 % for other types.',
+  cell('appDesktop({ chatHTML, drawerHTML: drawer({ tabs, actionRow:"slides", bodyHTML }) })', CU.appDesktop({ navbar: { title: 'Q3 board deck' }, chatHTML: chat, drawerHTML: CU.drawer({ tabs, actionRow: 'slides', bodyHTML: slidesBody, w: CU.drawerWidth({ type: 'slides' }), h: 1080 }), drawerType: 'slides' })));
+
+const working = [CU.userBubble({ text: 'Make 4 product shots of the sneaker on a beach' }), CU.turn(CU.working({ steps: [{ label: 'Image Generate', icon: 'image', state: 'active' }] }))].join('');
+sec('16b · appDesktop() while working: drawer opens at generation start with the dot-field tile', '',
+  cell('appDesktop({ chatHTML: working, drawerHTML: drawer(image) })', CU.appDesktop({ navbar: { title: 'Sneaker beach shots' }, chatHTML: working, prompt: { state: 'generating' }, drawerHTML: CU.drawer({ tabs: [{ type: 'image', title: 'Images', active: true }], actionRow: 'image', bodyHTML: CU.galleryBody(CU.mediaGrid({ items: [], generating: 1 })), w: CU.drawerWidth({}), h: 1080 }) })));
+
+/* 17 mobile */
+const mchat = [CU.userBubble({ text: 'Plan a 4-day trip to Lisbon', mobile: true }), CU.turn(CU.working({ state: 'done', files: 1 }), CU.reply({ md: 'Here is your 4-day Lisbon plan, with stays and transport.' }), CU.docCard({ type: 'trip', title: 'Lisbon in 4 days', thumb: G.c }), CU.actions())].join('');
+sec('17 · appMobile() 390×844', 'Navbar ≡ + Search / New chat / Open artifacts, thread, prompt box (no mode chevron), footer 11 px.',
+  row(cell('appMobile({ chatHTML })', CU.appMobile({ chatHTML: mchat })),
+      cell('appMobile({ homeHTML: home({ mobile:true }) })', CU.appMobile({ homeHTML: CU.home({ mobile: true, height: 796 }) })),
+      cell('drawer({ mobile:true, ... }) 390×844', CU.drawer({ mobile: true, tabs: [{ type: 'docs', title: 'Spring launch plan', active: true }], actionRow: 'sheets', bodyHTML: '', w: 390, h: 844 }))));
+
+/* icons */
+const names = Object.keys(CU.ICON_SVG);
+sec('icons.js · ' + names.length + ' real icons (converted from packages/icons/src)', 'Shown at 24 px, stroke 1.5 where the icon has no own stroke width.',
+  `<div class="cu" style="display:grid;grid-template-columns:repeat(12,1fr);gap:10px;width:1900px;background:#fff;padding:20px">${names.map((n) => `<div style="display:flex;flex-direction:column;align-items:center;gap:6px;padding:8px 0">${CU.icon(n, { size: n === 'LogoWithText' ? [96, 24] : 24, sw: 1.5, fit: true })}<span style="font:400 10px/12px ui-monospace,Menlo,monospace;color:#666;text-align:center;word-break:break-all">${n}</span></div>`).join('')}</div>`);
+
+document.getElementById('out').innerHTML = S.join('');
+document.body.dataset.ready = '1';
+</script>
+</body>
+</html>
